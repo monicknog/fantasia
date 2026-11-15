@@ -1,4 +1,4 @@
-# 👑 Moldes Padrinhos Mágicos (Cosmo & Wanda) — Escala 1:1 A4
+n# 👑 Moldes Padrinhos Mágicos (Cosmo & Wanda) — Escala 1:1 A4
 
 Aplicação web estática em arquivo único ([`index.html`](./index.html)) com moldes vetoriais (SVG) milimetricamente dimensionados em **escala real 1:1 para folhas A4 (`210mm × 297mm`)**, projetados para confecção com **papel fotográfico**, **folha de acetato** e **plastificadora térmica**.
 
@@ -12,10 +12,16 @@ Aplicação web estática em arquivo único ([`index.html`](./index.html)) com m
 - **Estrela da varinha (frente e verso espelhados, `Ø 95mm`):** duas estrelas de 5 pontas com margem tracejada para selagem na plastificadora e guia inferior de encaixe do cabo.
 - **Tira de revestimento do cabo (`180mm × 22mm`):** para enrolar em palito rígido, hashi ou canudo firme.
 
-### Folha 2 (`210mm × 297mm`)
+### Folha 2 (`210mm × 297mm`) — Asas Compactas + Suporte de Acetato
 - **Régua de calibração física (`50mm` / `5,0 cm`)**.
-- **Asas de fada (`195mm × 115mm`):** par de asas arredondadas com vinco central tracejado e 4 guias de furação (`⊕`) para elástico ou fita.
+- **Asas de fada compactas (`195mm × 115mm`):** par de asas arredondadas em peça única com vinco central tracejado e 4 guias de furação (`⊕`) para elástico ou fita.
 - **Gabarito de suporte invisível em acetato:** haste reta (`160mm × 15mm`) + abraçadeira de travamento (`100mm × 35mm`) para prender a coroa flutuando sobre uma tiara comum.
+- **Checklist impresso de materiais e guia de acabamento** no rodapé.
+
+### Folhas 3 e 4 (`210mm × 297mm`) — Asa Grande Dividida em 2 Folhas (`348mm × 205mm` montada)
+Para quem deseja uma asa maior nas costas (tamanho adulto/cosplay de **~35 cm de envergadura × 20,5 cm de altura**), a imagem da asa foi ampliada e dividida em duas folhas A4 espelhadas:
+- **Folha 3 (Metade Esquerda Ampliada — `185mm × 205mm`):** asa esquerda (`163mm`) + **Aba Central de União (`22mm × 120mm`)** com setas de registro (`▲ A1` / `▼ A2`), 4 furos de travamento (`⊕`) e manual passo a passo no rodapé.
+- **Folha 4 (Metade Direita Ampliada Espelhada — `185mm × 205mm`):** asa direita (`163mm`) espelhada (para que o lado brilhante do papel fotográfico fique virado para a frente em ambos os lados) + **Aba Central de União (`22mm × 120mm`)** + **Esquema Ilustrado em 3 Etapas** para plastificar cada metade separadamente em A4, sobrepor a aba central de `22mm` e travar mecanicamente com o elástico passando pelos 4 furos alinhados.
 
 ---
 
@@ -100,10 +106,16 @@ Aplicação web estática em arquivo único ([`index.html`](./index.html)) com m
 - **Estrela da varinha (frente e verso espelhados, `Ø 95mm`):** duas estrelas de 5 pontas com margem tracejada para selagem na plastificadora e guia inferior de encaixe do cabo.
 - **Tira de revestimento do cabo (`180mm × 22mm`):** para enrolar em palito rígido, hashi ou canudo firme.
 
-### Folha 2 (`210mm × 297mm`)
+### Folha 2 (`210mm × 297mm`) — Asas Compactas + Suporte de Acetato
 - **Régua de calibração física (`50mm` / `5,0 cm`)**.
-- **Asas de fada (`195mm × 115mm`):** par de asas arredondadas com vinco central tracejado e 4 guias de furação (`⊕`) para elástico ou fita.
+- **Asas de fada compactas (`195mm × 115mm`):** par de asas arredondadas em peça única com vinco central tracejado e 4 guias de furação (`⊕`) para elástico ou fita.
 - **Gabarito de suporte invisível em acetato:** haste reta (`160mm × 15mm`) + abraçadeira de travamento (`100mm × 35mm`) para prender a coroa flutuando sobre uma tiara comum.
+- **Checklist impresso de materiais e guia de acabamento** no rodapé.
+
+### Folhas 3 e 4 (`210mm × 297mm`) — Asa Grande Dividida em 2 Folhas (`348mm × 205mm` montada)
+Para quem deseja uma asa maior nas costas (tamanho adulto/cosplay de **~35 cm de envergadura × 20,5 cm de altura**), a imagem da asa foi ampliada e dividida em duas folhas A4 espelhadas:
+- **Folha 3 (Metade Esquerda Ampliada — `185mm × 205mm`):** asa esquerda (`163mm`) + **Aba Central de União (`22mm × 120mm`)** com setas de registro (`▲ A1` / `▼ A2`), 4 furos de travamento (`⊕`) e manual passo a passo no rodapé.
+- **Folha 4 (Metade Direita Ampliada Espelhada — `185mm × 205mm`):** asa direita (`163mm`) espelhada (para que o lado brilhante do papel fotográfico fique virado para a frente em ambos os lados) + **Aba Central de União (`22mm × 120mm`)** + **Esquema Ilustrado em 3 Etapas** para plastificar cada metade separadamente em A4, sobrepor a aba central de `22mm` e travar mecanicamente com o elástico passando pelos 4 furos alinhados.
 
 ---
 

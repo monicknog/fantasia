@@ -497,6 +497,10 @@
       }
     }
 
+    .sheet-wrapper.hidden-sheet {
+      display: none !important;
+    }
+
     /* ================= REGRAS RIGOROSAS DE IMPRESSÃO A4 ================= */
     @page {
       size: A4 portrait;
@@ -514,7 +518,8 @@
 
       .ui-header,
       .sheet-caption,
-      .no-print {
+      .no-print,
+      .sheet-wrapper.hidden-sheet {
         display: none !important;
       }
 
@@ -545,7 +550,7 @@
         break-inside: avoid;
       }
 
-      .sheet-wrapper:last-of-type .a4-sheet {
+      .sheet-wrapper.last-visible-sheet .a4-sheet {
         page-break-after: auto !important;
         break-after: auto !important;
       }
@@ -581,9 +586,18 @@
           </div>
 
           <div class="control-item">
+            <label for="wingModeSelect">Asas:</label>
+            <select id="wingModeSelect" aria-label="Selecionar tamanho das asas">
+              <option value="all" selected>🦋 Completo: Compacta + Grande Dividida (4 Folhas A4)</option>
+              <option value="large">🦋 Asa Grande Dividida 35×20,5cm (Folhas 1, 2, 3 e 4)</option>
+              <option value="compact">🦋 Apenas Asa Compacta 19,5×11,5cm (2 Folhas A4)</option>
+            </select>
+          </div>
+
+          <div class="control-item">
             <label class="toggle-label" for="toggleGuides">
               <input type="checkbox" id="toggleGuides" checked />
-              <span>Guias de corte, dobra e cotas (mm)</span>
+              <span>Guias e cotas (mm)</span>
             </label>
           </div>
 
@@ -618,19 +632,19 @@
               <li>
                 <label>
                   <input type="checkbox" />
-                  <span><b>2 folhas A4 de Papel Fotográfico</b> (Glossy ou Matte, gramatura <b>180g/m² a 230g/m²</b>) para imprimir as Folhas 1 e 2.</span>
+                  <span><b>2 a 4 folhas A4 de Papel Fotográfico</b> (Glossy ou Matte, <b>180g/m² a 230g/m²</b>): 2 folhas para kit compacto ou <b>4 folhas</b> para incluir a <b>Asa Grande Dividida (35×20,5 cm)</b>.</span>
                 </label>
               </li>
               <li>
                 <label>
                   <input type="checkbox" />
-                  <span><b>2 bolsas (pouches) de Plastificação A4</b> (espessura <b>125 a 175 micras / 0,05–0,07mm</b>) para blindar a coroa, estrelas e asas.</span>
+                  <span><b>2 a 4 bolsas (pouches) de Plastificação A4</b> (espessura <b>125 a 175 micras / 0,05–0,07mm</b>) — na Asa Grande, cada metade (185×205mm) é plastificada em 1 pouch A4 antes de unir!</span>
                 </label>
               </li>
               <li>
                 <label>
                   <input type="checkbox" />
-                  <span><b>1 folha de Acetato Transparente A4</b> (espessura rígida de <b>200 a 300 micras / 0,20–0,30mm</b>) para a haste invisível de 160×15mm e abraçadeira.</span>
+                  <span><b>1 folha de Acetato Transparente A4</b> (espessura rígida de <b>200 a 300 micras / 0,20–0,30mm</b>) para a haste invisível de 160×15mm, abraçadeira e reforço central opcional da Asa Grande.</span>
                 </label>
               </li>
             </ul>
@@ -1510,11 +1524,485 @@
       </article>
     </div>
 
+    <!-- ==================== FOLHA 3: ASA GRANDE DIVIDIDA — METADE ESQUERDA (TAMANHO ADULTO/COSPLAY) ==================== -->
+    <div class="sheet-wrapper large-wing-sheet" id="wrapperSheet3">
+      <div class="sheet-caption no-print">
+        <span>📄 <b>Folha 3 de 4 (Asa Grande Dividida — Parte 1/2)</b> — Metade Esquerda Ampliada (185×205mm) + Aba Central de União (Envergadura Total Montada: ~350×205mm)</span>
+      </div>
+
+      <article class="a4-sheet" id="sheet3" aria-label="Folha 3 A4 - Asa Grande Dividida Lado Esquerdo">
+        <svg id="svgSheet3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" width="210mm" height="297mm">
+          <defs>
+            <linearGradient id="wingsGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color: var(--wings-inner);" />
+              <stop offset="55%" style="stop-color: var(--wings-fill);" />
+              <stop offset="100%" style="stop-color: var(--wings-FillGradStop);" />
+            </linearGradient>
+            <pattern id="overlapHatch3" width="3.5" height="3.5" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="3.5" stroke="#0284C7" stroke-width="0.45" />
+            </pattern>
+          </defs>
+
+          <!-- Fundo branco explícito -->
+          <rect x="0" y="0" width="210" height="297" fill="#FFFFFF" />
+
+          <!-- Moldura de margem de segurança A4 (5mm) -->
+          <g class="tech-guide">
+            <rect x="5" y="5" width="200" height="287" fill="none" stroke="#CBD5E1" stroke-width="0.25" stroke-dasharray="2,2" />
+          </g>
+
+          <!-- CABEÇALHO E RÉGUA DE CALIBRAÇÃO FÍSICA DE EXATOS 50mm -->
+          <g transform="translate(10, 8)">
+            <text x="0" y="4.5" font-family="Segoe UI, Arial, sans-serif" font-size="3.6" font-weight="800" fill="#0F172A">
+              PADRINHOS MÁGICOS — FOLHA 3/4 (ASA GRANDE DIVIDIDA: LADO ESQUERDO)
+            </text>
+            <text x="0" y="8.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.4" fill="#475569">
+              Para costas maiores/adulto: una esta Metade Esquerda (Folha 3) + Metade Direita (Folha 4) = 348 mm × 205 mm!
+            </text>
+
+            <!-- Régua de Calibração de exatos 50mm -->
+            <g transform="translate(135, 0)">
+              <rect x="-3" y="-1.5" width="56" height="11.5" rx="1.2" fill="#F8FAFC" stroke="#94A3B8" stroke-width="0.3" />
+              <text x="25" y="1.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="#0F172A">
+                RÉGUA DE CALIBRAÇÃO: EXATOS 50 mm (5 cm)
+              </text>
+              <line x1="0" y1="6.5" x2="50" y2="6.5" stroke="#0F172A" stroke-width="0.5" />
+              <g stroke="#0F172A" stroke-width="0.3">
+                <line x1="0"  y1="3.5" x2="0"  y2="6.5" stroke-width="0.5" />
+                <line x1="10" y1="3.5" x2="10" y2="6.5" stroke-width="0.5" />
+                <line x1="20" y1="3.5" x2="20" y2="6.5" stroke-width="0.5" />
+                <line x1="30" y1="3.5" x2="30" y2="6.5" stroke-width="0.5" />
+                <line x1="40" y1="3.5" x2="40" y2="6.5" stroke-width="0.5" />
+                <line x1="50" y1="3.5" x2="50" y2="6.5" stroke-width="0.5" />
+                <line x1="5"  y1="4.5" x2="5"  y2="6.5" />
+                <line x1="15" y1="4.5" x2="15" y2="6.5" />
+                <line x1="25" y1="4.5" x2="25" y2="6.5" />
+                <line x1="35" y1="4.5" x2="35" y2="6.5" />
+                <line x1="45" y1="4.5" x2="45" y2="6.5" />
+              </g>
+              <text x="0"  y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0F172A">0</text>
+              <text x="10" y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0F172A">1</text>
+              <text x="20" y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0F172A">2</text>
+              <text x="30" y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0F172A">3</text>
+              <text x="40" y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0F172A">4</text>
+              <text x="50" y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" font-weight="700" fill="#0F172A">5cm</text>
+            </g>
+          </g>
+
+          <!-- =========================================================================
+               6A. ASA GRANDE DIVIDIDA — METADE ESQUERDA (185mm × 205mm)
+               - Corpo da Asa Esquerda: X = 12mm até X = 175mm (163mm)
+               - Ponte / Aba Central de União: X = 175mm até X = 197mm (22mm de sobreposição)
+               - Eixo Central das Costas (Vinco): X = 186mm
+               - Altura Total da Asa: Y = 30mm até Y = 235mm (205mm)
+               ========================================================================= -->
+          <g id="largeLeftWingGroup">
+            <!-- Cotas técnicas -->
+            <g class="tech-guide">
+              <!-- Cota horizontal 185mm (163mm asa + 22mm aba de união) -->
+              <line x1="12" y1="25.5" x2="197" y2="25.5" stroke="#0284C7" stroke-width="0.35" />
+              <line x1="12" y1="23.5" x2="12" y2="27.5" stroke="#0284C7" stroke-width="0.4" />
+              <line x1="175" y1="23.5" x2="175" y2="27.5" stroke="#0284C7" stroke-width="0.4" />
+              <line x1="197" y1="23.5" x2="197" y2="27.5" stroke="#0284C7" stroke-width="0.4" />
+              <rect x="46" y="22.5" width="98" height="4.8" fill="#FFFFFF" />
+              <text x="95" y="26.1" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.6" font-weight="800" fill="#0284C7">
+                ASA ESQUERDA: 163 mm + ABA DE UNIÃO: 22 mm (TOTAL: 185 mm)
+              </text>
+
+              <!-- Cota vertical 205mm -->
+              <line x1="8" y1="30" x2="8" y2="235" stroke="#0284C7" stroke-width="0.35" />
+              <line x1="6.5" y1="30" x2="9.5" y2="30" stroke="#0284C7" stroke-width="0.4" />
+              <line x1="6.5" y1="235" x2="9.5" y2="235" stroke="#0284C7" stroke-width="0.4" />
+              <text x="6.5" y="132.5" text-anchor="middle" transform="rotate(-90 6.5 132.5)" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" font-weight="700" fill="#0284C7">
+                ALTURA DA ASA GRANDE: 205 mm (20,5 cm)
+              </text>
+            </g>
+
+            <!-- Margem externa de plastificação (+3mm) -->
+            <path class="tech-guide"
+              d="M 175,63
+                 C 150,26 88,26 44,33
+                 C 9,39 9,88 18,122
+                 C 27,146 46,154 62,158
+                 C 26,168 24,209 52,228
+                 C 82,246 146,235 175,189
+                 L 200,189
+                 L 200,63 Z"
+              fill="none" stroke="#0284C7" stroke-width="0.4" stroke-dasharray="2.5,1.2,0.6,1.2" />
+
+            <!-- CONTORNO PRINCIPAL DA ASA ESQUERDA AMPLIADA + ABA DE UNIÃO CENTRAL (X=175..197, Y=66..186) -->
+            <path
+              d="M 175,66
+                 C 150,30 88,30 46,37
+                 C 12,43 12,89 21,121
+                 C 29,144 48,151 65,155
+                 C 30,165 28,205 55,223
+                 C 84,241 146,231 175,186
+                 L 197,186
+                 L 197,66 Z"
+              fill="url(#wingsGrad3)"
+              stroke="var(--wings-stroke)"
+              stroke-width="1.4"
+              stroke-linejoin="round" />
+
+            <!-- Área hachurada da Aba Central de União / Sobreposição (22mm x 120mm: X=175..197, Y=66..186) -->
+            <rect x="175" y="66" width="22" height="120" fill="#FFFFFF" fill-opacity="0.55" />
+            <rect x="175" y="66" width="22" height="120" fill="url(#overlapHatch3)" opacity="0.45" />
+            <rect x="175" y="66" width="22" height="120" fill="none" stroke="#0284C7" stroke-width="0.7" stroke-dasharray="2.5,1.5" />
+
+            <!-- Nervuras e brilhos internos ampliados estilo Padrinhos Mágicos -->
+            <path d="M 162,96 C 120,60 66,54 34,72" fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" opacity="0.75" />
+            <path d="M 162,135 C 122,130 82,138 65,155" fill="none" stroke="var(--wings-stroke)" stroke-width="1.2" stroke-linecap="round" opacity="0.65" />
+            <path d="M 162,158 C 126,176 92,196 68,206" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" opacity="0.75" />
+
+            <!-- EIXO CENTRAL (X=186mm), MARCAS DE REGISTRO (▲ A1 / ▼ A2) E 4 FUROS DE TRAVAMENTO (⊕) -->
+            <g class="tech-guide">
+              <!-- Linha de Centro / Vinco (X=186mm) -->
+              <line x1="186" y1="58" x2="186" y2="194" stroke="#DC2626" stroke-width="0.8" stroke-dasharray="3,2" />
+
+              <!-- Triângulos de Registro para Alinhamento Perfeito com a Folha 4 -->
+              <polygon points="186,66 183.5,61.5 188.5,61.5" fill="#DC2626" />
+              <text x="186" y="59.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#DC2626">
+                ALINHAR TOPO (A1)
+              </text>
+
+              <polygon points="186,186 183.5,190.5 188.5,190.5" fill="#DC2626" />
+              <text x="186" y="194.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#DC2626">
+                ALINHAR BASE (A2)
+              </text>
+
+              <!-- 4 Furos de Passagem de Elástico e Travamento das 2 Metades (Ø 4,6mm)
+                   Coordenadas idênticas na sobreposição: X = 181 e 191 (±5mm do centro 186), Y = 86 e 166
+              -->
+              <circle cx="181" cy="86" r="2.3" fill="#FFFFFF" stroke="#DC2626" stroke-width="0.65" />
+              <line x1="178" y1="86" x2="184" y2="86" stroke="#DC2626" stroke-width="0.4" />
+              <line x1="181" y1="83" x2="181" y2="89" stroke="#DC2626" stroke-width="0.4" />
+
+              <circle cx="191" cy="86" r="2.3" fill="#FFFFFF" stroke="#DC2626" stroke-width="0.65" />
+              <line x1="188" y1="86" x2="194" y2="86" stroke="#DC2626" stroke-width="0.4" />
+              <line x1="191" y1="83" x2="191" y2="89" stroke="#DC2626" stroke-width="0.4" />
+
+              <circle cx="181" cy="166" r="2.3" fill="#FFFFFF" stroke="#DC2626" stroke-width="0.65" />
+              <line x1="178" y1="166" x2="184" y2="166" stroke="#DC2626" stroke-width="0.4" />
+              <line x1="181" y1="163" x2="181" y2="169" stroke="#DC2626" stroke-width="0.4" />
+
+              <circle cx="191" cy="166" r="2.3" fill="#FFFFFF" stroke="#DC2626" stroke-width="0.65" />
+              <line x1="188" y1="166" x2="194" y2="166" stroke="#DC2626" stroke-width="0.4" />
+              <line x1="191" y1="163" x2="191" y2="169" stroke="#DC2626" stroke-width="0.4" />
+
+              <!-- Texto vertical na aba de união -->
+              <text x="186" y="126" text-anchor="middle" transform="rotate(-90 186 126)" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" font-weight="800" fill="#0F172A">
+                ABA DE UNIÃO CENTRAL (22 × 120 mm) — SOBREPOR NA FOLHA 4
+              </text>
+
+              <!-- Identificação no centro da Asa Esquerda -->
+              <text x="95" y="112" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="4.2" font-weight="800" fill="#0F172A" opacity="0.8">
+                ASA GRANDE — METADE ESQUERDA
+              </text>
+              <text x="95" y="117.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.7" font-weight="700" fill="#0369A1">
+                Peça individual: 185 × 205 mm (Cabe inteira em 1 pouch de plastificação A4!)
+              </text>
+              <text x="95" y="122.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.4" fill="#334155">
+                Envergadura total após unir com a Folha 4: 348 mm × 205 mm (~35 cm)
+              </text>
+            </g>
+          </g>
+
+          <!-- RODAPÉ DA FOLHA 3: COMO PLASTIFICAR EM A4 E UNIR AS DUAS METADES -->
+          <g class="tech-guide" transform="translate(10, 242)">
+            <rect x="0" y="0" width="190" height="46" rx="2" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.35" />
+            <text x="5" y="5.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.7" font-weight="800" fill="#0F172A">
+              COMO MONTAR A ASA GRANDE DIVIDIDA (USANDO PLASTIFICADORA A4 COMUM):
+            </text>
+            <text x="5" y="10.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" fill="#334155">
+              1. RECORTE ANTES DE UNIR: Recorte esta Metade Esquerda (Folha 3) e a Metade Direita (Folha 4) na linha preta contínua (incluindo a aba de 22mm).
+            </text>
+            <text x="5" y="15.0" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" fill="#334155">
+              2. PLASTIFIQUE SEPARADAMENTE EM A4: Como cada metade mede 185 × 205 mm, coloque cada uma em 1 bolsa (pouch) A4 e passe na plastificadora.
+            </text>
+            <text x="5" y="19.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" fill="#334155">
+              3. RECORTE A BORDA SELADA: Recorte o plástico ao redor de cada metade deixando 3 mm de margem transparente (na aba reta central, corte rente).
+            </text>
+            <text x="5" y="24.0" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" fill="#334155">
+              4. SOBREPONHA E COLE O CENTRO (22 mm): Alinhe a Aba Central de 22mm da Folha 3 sobre a Aba Central da Folha 4 guiando-se pelas setas A1 e A2.
+            </text>
+            <text x="5" y="28.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" fill="#334155">
+                 Fixe a sobreposição com fita dupla-face transparente extra-forte (acrílica) ou cola quente (opcional: cole 1 tira de acetato atrás do centro).
+            </text>
+            <text x="5" y="33.0" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="700" fill="#DC2626">
+              5. TRAVAMENTO MECÂNICO COM OS 4 FUROS (⊕): Com as duas metades já unidas, fure os 4 círculos (⊕) atravessando as duas abas sobrepostas!
+            </text>
+            <text x="5" y="37.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" fill="#334155">
+                 Ao passar o elástico ou fita pelos 4 furos, ele costura e trava as duas metades juntas, impedindo que se soltem durante o uso!
+            </text>
+            <text x="5" y="42.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="700" fill="#0284C7">
+              ★ Dica de Papel Fotográfico: Como a Folha 3 e a Folha 4 já estão espelhadas, o lado brilhante impresso fica virado para a frente nas duas asas!
+            </text>
+          </g>
+        </svg>
+      </article>
+    </div>
+
+    <!-- ==================== FOLHA 4: ASA GRANDE DIVIDIDA — METADE DIREITA ESPELHADA + DIAGRAMA DE UNIÃO ==================== -->
+    <div class="sheet-wrapper large-wing-sheet" id="wrapperSheet4">
+      <div class="sheet-caption no-print">
+        <span>📄 <b>Folha 4 de 4 (Asa Grande Dividida — Parte 2/2)</b> — Metade Direita Espelhada (185×205mm) + Diagrama Visual de União</span>
+      </div>
+
+      <article class="a4-sheet" id="sheet4" aria-label="Folha 4 A4 - Asa Grande Dividida Lado Direito">
+        <svg id="svgSheet4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" width="210mm" height="297mm">
+          <defs>
+            <linearGradient id="wingsGrad4" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color: var(--wings-inner);" />
+              <stop offset="55%" style="stop-color: var(--wings-fill);" />
+              <stop offset="100%" style="stop-color: var(--wings-FillGradStop);" />
+            </linearGradient>
+            <pattern id="overlapHatch4" width="3.5" height="3.5" patternTransform="rotate(-45 0 0)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="3.5" stroke="#0284C7" stroke-width="0.45" />
+            </pattern>
+          </defs>
+
+          <!-- Fundo branco explícito -->
+          <rect x="0" y="0" width="210" height="297" fill="#FFFFFF" />
+
+          <!-- Moldura de margem de segurança A4 (5mm) -->
+          <g class="tech-guide">
+            <rect x="5" y="5" width="200" height="287" fill="none" stroke="#CBD5E1" stroke-width="0.25" stroke-dasharray="2,2" />
+          </g>
+
+          <!-- CABEÇALHO E RÉGUA DE CALIBRAÇÃO FÍSICA DE EXATOS 50mm -->
+          <g transform="translate(10, 8)">
+            <text x="0" y="4.5" font-family="Segoe UI, Arial, sans-serif" font-size="3.6" font-weight="800" fill="#0F172A">
+              PADRINHOS MÁGICOS — FOLHA 4/4 (ASA GRANDE DIVIDIDA: LADO DIREITO)
+            </text>
+            <text x="0" y="8.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.4" fill="#475569">
+              Una a Aba Central esquerda desta folha (22 mm) sob a Aba Central da Folha 3 alinhando A1 e A2
+            </text>
+
+            <!-- Régua de Calibração de exatos 50mm -->
+            <g transform="translate(135, 0)">
+              <rect x="-3" y="-1.5" width="56" height="11.5" rx="1.2" fill="#F8FAFC" stroke="#94A3B8" stroke-width="0.3" />
+              <text x="25" y="1.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="#0F172A">
+                RÉGUA DE CALIBRAÇÃO: EXATOS 50 mm (5 cm)
+              </text>
+              <line x1="0" y1="6.5" x2="50" y2="6.5" stroke="#0F172A" stroke-width="0.5" />
+              <g stroke="#0F172A" stroke-width="0.3">
+                <line x1="0"  y1="3.5" x2="0"  y2="6.5" stroke-width="0.5" />
+                <line x1="10" y1="3.5" x2="10" y2="6.5" stroke-width="0.5" />
+                <line x1="20" y1="3.5" x2="20" y2="6.5" stroke-width="0.5" />
+                <line x1="30" y1="3.5" x2="30" y2="6.5" stroke-width="0.5" />
+                <line x1="40" y1="3.5" x2="40" y2="6.5" stroke-width="0.5" />
+                <line x1="50" y1="3.5" x2="50" y2="6.5" stroke-width="0.5" />
+                <line x1="5"  y1="4.5" x2="5"  y2="6.5" />
+                <line x1="15" y1="4.5" x2="15" y2="6.5" />
+                <line x1="25" y1="4.5" x2="25" y2="6.5" />
+                <line x1="35" y1="4.5" x2="35" y2="6.5" />
+                <line x1="45" y1="4.5" x2="45" y2="6.5" />
+              </g>
+              <text x="0"  y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0F172A">0</text>
+              <text x="10" y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0F172A">1</text>
+              <text x="20" y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0F172A">2</text>
+              <text x="30" y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0F172A">3</text>
+              <text x="40" y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0F172A">4</text>
+              <text x="50" y="9.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" font-weight="700" fill="#0F172A">5cm</text>
+            </g>
+          </g>
+
+          <!-- =========================================================================
+               6B. ASA GRANDE DIVIDIDA — METADE DIREITA ESPELHADA (185mm × 205mm)
+               - Ponte / Aba Central de União: X = 13mm até X = 35mm (22mm de sobreposição)
+               - Eixo Central das Costas (Vinco): X = 24mm
+               - Corpo da Asa Direita: X = 35mm até X = 198mm (163mm)
+               - Altura Total da Asa: Y = 30mm até Y = 235mm (205mm)
+               ========================================================================= -->
+          <g id="largeRightWingGroup">
+            <!-- Cotas técnicas -->
+            <g class="tech-guide">
+              <line x1="13" y1="25.5" x2="198" y2="25.5" stroke="#0284C7" stroke-width="0.35" />
+              <line x1="13" y1="23.5" x2="13" y2="27.5" stroke="#0284C7" stroke-width="0.4" />
+              <line x1="35" y1="23.5" x2="35" y2="27.5" stroke="#0284C7" stroke-width="0.4" />
+              <line x1="198" y1="23.5" x2="198" y2="27.5" stroke="#0284C7" stroke-width="0.4" />
+              <rect x="56" y="22.5" width="98" height="4.8" fill="#FFFFFF" />
+              <text x="105" y="26.1" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.6" font-weight="800" fill="#0284C7">
+                ABA DE UNIÃO: 22 mm + ASA DIREITA: 163 mm (TOTAL: 185 mm)
+              </text>
+
+              <!-- Cota vertical 205mm -->
+              <line x1="202" y1="30" x2="202" y2="235" stroke="#0284C7" stroke-width="0.35" />
+              <line x1="200.5" y1="30" x2="203.5" y2="30" stroke="#0284C7" stroke-width="0.4" />
+              <line x1="200.5" y1="235" x2="203.5" y2="235" stroke="#0284C7" stroke-width="0.4" />
+              <text x="203.5" y="132.5" text-anchor="middle" transform="rotate(90 203.5 132.5)" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" font-weight="700" fill="#0284C7">
+                ALTURA DA ASA GRANDE: 205 mm (20,5 cm)
+              </text>
+            </g>
+
+            <!-- Margem externa de plastificação (+3mm) -->
+            <path class="tech-guide"
+              d="M 35,63
+                 C 60,26 122,26 166,33
+                 C 201,39 201,88 192,122
+                 C 183,146 164,154 148,158
+                 C 184,168 186,209 158,228
+                 C 128,246 64,235 35,189
+                 L 10,189
+                 L 10,63 Z"
+              fill="none" stroke="#0284C7" stroke-width="0.4" stroke-dasharray="2.5,1.2,0.6,1.2" />
+
+            <!-- CONTORNO PRINCIPAL DA ASA DIREITA AMPLIADA + ABA DE UNIÃO CENTRAL (X=13..35, Y=66..186) -->
+            <path
+              d="M 35,66
+                 C 60,30 122,30 164,37
+                 C 198,43 198,89 189,121
+                 C 181,144 162,151 145,155
+                 C 180,165 182,205 155,223
+                 C 126,241 64,231 35,186
+                 L 13,186
+                 L 13,66 Z"
+              fill="url(#wingsGrad4)"
+              stroke="var(--wings-stroke)"
+              stroke-width="1.4"
+              stroke-linejoin="round" />
+
+            <!-- Área hachurada da Aba Central de União / Sobreposição (22mm x 120mm: X=13..35, Y=66..186) -->
+            <rect x="13" y="66" width="22" height="120" fill="#FFFFFF" fill-opacity="0.55" />
+            <rect x="13" y="66" width="22" height="120" fill="url(#overlapHatch4)" opacity="0.45" />
+            <rect x="13" y="66" width="22" height="120" fill="none" stroke="#0284C7" stroke-width="0.7" stroke-dasharray="2.5,1.5" />
+
+            <!-- Nervuras e brilhos internos ampliados espelhados -->
+            <path d="M 48,96 C 90,60 144,54 176,72" fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" opacity="0.75" />
+            <path d="M 48,135 C 88,130 128,138 145,155" fill="none" stroke="var(--wings-stroke)" stroke-width="1.2" stroke-linecap="round" opacity="0.65" />
+            <path d="M 48,158 C 84,176 118,196 142,206" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" opacity="0.75" />
+
+            <!-- EIXO CENTRAL (X=24mm), MARCAS DE REGISTRO (▲ A1 / ▼ A2) E 4 FUROS DE TRAVAMENTO (⊕) -->
+            <g class="tech-guide">
+              <!-- Linha de Centro / Vinco (X=24mm) -->
+              <line x1="24" y1="58" x2="24" y2="194" stroke="#DC2626" stroke-width="0.8" stroke-dasharray="3,2" />
+
+              <!-- Triângulos de Registro para Alinhamento com a Folha 3 -->
+              <polygon points="24,66 21.5,61.5 26.5,61.5" fill="#DC2626" />
+              <text x="24" y="59.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#DC2626">
+                ALINHAR TOPO (A1)
+              </text>
+
+              <polygon points="24,186 21.5,190.5 26.5,190.5" fill="#DC2626" />
+              <text x="24" y="194.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#DC2626">
+                ALINHAR BASE (A2)
+              </text>
+
+              <!-- 4 Furos de Passagem de Elástico e Travamento das 2 Metades (Ø 4,6mm)
+                   Coordenadas idênticas na sobreposição: X = 19 e 29 (±5mm do centro 24), Y = 86 e 166
+              -->
+              <circle cx="19" cy="86" r="2.3" fill="#FFFFFF" stroke="#DC2626" stroke-width="0.65" />
+              <line x1="16" y1="86" x2="22" y2="86" stroke="#DC2626" stroke-width="0.4" />
+              <line x1="19" y1="83" x2="19" y2="89" stroke="#DC2626" stroke-width="0.4" />
+
+              <circle cx="29" cy="86" r="2.3" fill="#FFFFFF" stroke="#DC2626" stroke-width="0.65" />
+              <line x1="26" y1="86" x2="32" y2="86" stroke="#DC2626" stroke-width="0.4" />
+              <line x1="29" y1="83" x2="29" y2="89" stroke="#DC2626" stroke-width="0.4" />
+
+              <circle cx="19" cy="166" r="2.3" fill="#FFFFFF" stroke="#DC2626" stroke-width="0.65" />
+              <line x1="16" y1="166" x2="22" y2="166" stroke="#DC2626" stroke-width="0.4" />
+              <line x1="19" y1="163" x2="19" y2="169" stroke="#DC2626" stroke-width="0.4" />
+
+              <circle cx="29" cy="166" r="2.3" fill="#FFFFFF" stroke="#DC2626" stroke-width="0.65" />
+              <line x1="26" y1="166" x2="32" y2="166" stroke="#DC2626" stroke-width="0.4" />
+              <line x1="29" y1="163" x2="29" y2="169" stroke="#DC2626" stroke-width="0.4" />
+
+              <!-- Texto vertical na aba de união -->
+              <text x="24" y="126" text-anchor="middle" transform="rotate(-90 24 126)" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" font-weight="800" fill="#0F172A">
+                ABA DE UNIÃO CENTRAL (22 × 120 mm) — COLAR SOB A FOLHA 3
+              </text>
+
+              <!-- Identificação no centro da Asa Direita -->
+              <text x="115" y="112" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="4.2" font-weight="800" fill="#0F172A" opacity="0.8">
+                ASA GRANDE — METADE DIREITA
+              </text>
+              <text x="115" y="117.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.7" font-weight="700" fill="#0369A1">
+                Peça individual: 185 × 205 mm (Espelhada para Papel Fotográfico)
+              </text>
+              <text x="115" y="122.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.4" fill="#334155">
+                Una com a Folha 3 pela aba de 22 mm para formar 348 mm × 205 mm
+              </text>
+            </g>
+          </g>
+
+          <!-- RODAPÉ DA FOLHA 4: DIAGRAMA VISUAL EM 3 ETAPAS PARA UNIR AS DUAS METADES -->
+          <g class="tech-guide" transform="translate(10, 240)">
+            <rect x="0" y="0" width="190" height="48" rx="2" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.35" />
+            <text x="95" y="5.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.8" font-weight="800" fill="#0F172A">
+              ESQUEMA ILUSTRADO DE MONTAGEM DA ASA GRANDE DIVIDIDA (348 mm × 205 mm)
+            </text>
+
+            <!-- Passo 1 Visual -->
+            <g transform="translate(6, 9)">
+              <rect x="0" y="0" width="56" height="35" rx="1.8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="0.35" />
+              <text x="28" y="4.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#0369A1">
+                PASSO 1: PLASTIFICAR SEPARADO
+              </text>
+              <!-- Ilustração 2 pouches A4 -->
+              <rect x="9" y="7" width="16" height="20" fill="#E0F2FE" stroke="#0284C7" stroke-width="0.35" stroke-dasharray="1,1" />
+              <path d="M 22,10 C 14,8 11,13 13,18 C 11,21 15,25 22,23 L 24,23 L 24,10 Z" fill="var(--wings-fill)" stroke="#0F172A" stroke-width="0.4" />
+              <rect x="31" y="7" width="16" height="20" fill="#E0F2FE" stroke="#0284C7" stroke-width="0.35" stroke-dasharray="1,1" />
+              <path d="M 34,10 C 42,8 45,13 43,18 C 45,21 41,25 34,23 L 32,23 L 32,10 Z" fill="var(--wings-fill)" stroke="#0F172A" stroke-width="0.4" />
+              <text x="28" y="30.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                Recorte Folha 3 e Folha 4 e passe
+              </text>
+              <text x="28" y="33.3" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                cada metade em 1 pouch A4
+              </text>
+            </g>
+
+            <!-- Passo 2 Visual -->
+            <g transform="translate(67, 9)">
+              <rect x="0" y="0" width="56" height="35" rx="1.8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="0.35" />
+              <text x="28" y="4.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#DC2626">
+                PASSO 2: SOBREPOR ABAS (22mm)
+              </text>
+              <!-- Ilustração das duas asas se unindo no centro -->
+              <path d="M 27,10 C 16,7 10,13 13,18 C 10,22 16,26 27,23 L 30,23 L 30,10 Z" fill="var(--wings-fill)" stroke="#0F172A" stroke-width="0.4" />
+              <path d="M 29,10 C 40,7 46,13 43,18 C 46,22 40,26 29,23 L 26,23 L 26,10 Z" fill="var(--wings-fill)" fill-opacity="0.85" stroke="#0F172A" stroke-width="0.4" />
+              <rect x="26" y="10" width="4" height="13" fill="#FEE2E2" stroke="#DC2626" stroke-width="0.4" />
+              <text x="28" y="30.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                Alinhe A1 e A2 no centro e cole com
+              </text>
+              <text x="28" y="33.3" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                dupla-face forte ou cola quente
+              </text>
+            </g>
+
+            <!-- Passo 3 Visual -->
+            <g transform="translate(128, 9)">
+              <rect x="0" y="0" width="56" height="35" rx="1.8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="0.35" />
+              <text x="28" y="4.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#15803D">
+                PASSO 3: FURAR JUNTAS E PASSAR FITA
+              </text>
+              <!-- Ilustração da asa completa 348mm com os 4 furos e alças de elástico -->
+              <path d="M 28,11 C 17,7 10,13 13,18 C 10,22 17,26 28,22 C 39,26 46,22 43,18 C 46,13 39,7 28,11 Z" fill="var(--wings-fill)" stroke="#0F172A" stroke-width="0.45" />
+              <circle cx="27" cy="13.5" r="0.8" fill="#DC2626" />
+              <circle cx="29" cy="13.5" r="0.8" fill="#DC2626" />
+              <circle cx="27" cy="19.5" r="0.8" fill="#DC2626" />
+              <circle cx="29" cy="19.5" r="0.8" fill="#DC2626" />
+              <!-- Alças de elástico -->
+              <path d="M 27,13.5 C 20,11 20,22 27,19.5" fill="none" stroke="#DC2626" stroke-width="0.4" stroke-dasharray="1,0.8" />
+              <path d="M 29,13.5 C 36,11 36,22 29,19.5" fill="none" stroke="#DC2626" stroke-width="0.4" stroke-dasharray="1,0.8" />
+              <text x="28" y="30.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                Fure os 4 pontos (⊕) atravessando as 2
+              </text>
+              <text x="28" y="33.3" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                camadas e passe o elástico p/ travar!
+              </text>
+            </g>
+          </g>
+        </svg>
+      </article>
+    </div>
+
   </main>
 
   <script>
     (function () {
       const themeSelect = document.getElementById('themeSelect');
+      const wingModeSelect = document.getElementById('wingModeSelect');
       const toggleGuides = document.getElementById('toggleGuides');
       const btnToggleMaterials = document.getElementById('btnToggleMaterials');
       const materialsDrawer = document.getElementById('materialsDrawer');
@@ -1523,10 +2011,41 @@
       const btnPrint = document.getElementById('btnPrint');
       const btnDownloadPdf = document.getElementById('btnDownloadPdf');
 
+      function updateVisibleSheets() {
+        const mode = wingModeSelect ? wingModeSelect.value : 'all';
+        const largeWingSheets = document.querySelectorAll('.large-wing-sheet');
+
+        largeWingSheets.forEach(function (el) {
+          if (mode === 'compact') {
+            el.classList.add('hidden-sheet');
+          } else {
+            el.classList.remove('hidden-sheet');
+          }
+        });
+
+        // Atualizar qual folha recebe a classe .last-visible-sheet para evitar quebra de página extra no final da impressão
+        const allWrappers = Array.from(document.querySelectorAll('.sheet-wrapper'));
+        allWrappers.forEach(function (w) {
+          w.classList.remove('last-visible-sheet');
+        });
+        const visibleWrappers = allWrappers.filter(function (w) {
+          return !w.classList.contains('hidden-sheet');
+        });
+        if (visibleWrappers.length > 0) {
+          visibleWrappers[visibleWrappers.length - 1].classList.add('last-visible-sheet');
+        }
+      }
+
       // 1. Troca de Tema em Tempo Real
       themeSelect.addEventListener('change', function (e) {
         document.body.setAttribute('data-theme', e.target.value);
       });
+
+      // 1B. Seletor de Tamanho de Asas (Compacta vs Grande Dividida em 2 Folhas)
+      if (wingModeSelect) {
+        wingModeSelect.addEventListener('change', updateVisibleSheets);
+        updateVisibleSheets();
+      }
 
       // 2. Exibir / Ocultar Linhas Guia, Dobras e Cotas (mm)
       toggleGuides.addEventListener('change', function (e) {
@@ -1555,8 +2074,6 @@
       });
 
       // 5. Geração de PDF A4 em Escala Exata 1:1 (210mm x 297mm)
-      // Converte cada SVG A4 diretamente com os estilos CSS atuais resolvidos para Canvas de alta resolução (300 DPI)
-      // e posiciona milimetricamente em 2 páginas A4 usando jsPDF (0, 0, 210, 297).
       function resolveSvgWithInlineVariables(svgElement) {
         const computedBody = getComputedStyle(document.body);
         const cssVars = [
@@ -1651,15 +2168,17 @@
           const widthPx = 2480;
           const heightPx = 3508;
 
-          const svg1 = document.getElementById('svgSheet1');
-          const svg2 = document.getElementById('svgSheet2');
+          const visibleSvgs = Array.from(
+            document.querySelectorAll('.sheet-wrapper:not(.hidden-sheet) .a4-sheet svg')
+          );
 
-          const page1DataUrl = await renderSvgToDataUrl(svg1, widthPx, heightPx);
-          pdf.addImage(page1DataUrl, 'PNG', 0, 0, 210, 297, undefined, 'FAST');
-
-          pdf.addPage('a4', 'portrait');
-          const page2DataUrl = await renderSvgToDataUrl(svg2, widthPx, heightPx);
-          pdf.addImage(page2DataUrl, 'PNG', 0, 0, 210, 297, undefined, 'FAST');
+          for (let i = 0; i < visibleSvgs.length; i++) {
+            if (i > 0) {
+              pdf.addPage('a4', 'portrait');
+            }
+            const pageDataUrl = await renderSvgToDataUrl(visibleSvgs[i], widthPx, heightPx);
+            pdf.addImage(pageDataUrl, 'PNG', 0, 0, 210, 297, undefined, 'FAST');
+          }
 
           pdf.save('moldes-padrinhos-magicos-a4.pdf');
         } catch (err) {
