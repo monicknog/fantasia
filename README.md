@@ -25,6 +25,19 @@ Para quem deseja uma asa maior nas costas (tamanho adulto/cosplay de **~35 cm de
 
 ---
 
+## 📏 Calibração Sob Medida para Estatura de 1,60 m
+
+Os moldes e marcações foram ajustados especificamente para vestir com proporção fiel ao desenho em uma pessoa de **1,60 m de altura**:
+
+| Acessório | Medida Calibrada p/ 1,60 m | Como Ajustar na Montagem |
+| :--- | :--- | :--- |
+| **Asas nas Costas** | **`348 mm × 205 mm`** (`34,8 × 20,5 cm`) | Use a **Asa Grande Dividida (Folhas 3 e 4)** — cobre perfeitamente a região das escápulas de quem tem `1,60 m` sem atrapalhar os braços. |
+| **Alças de Elástico** | **2 tiras de `55 cm`** (alça pronta: **`46 cm`**) | Passe cada tira pelos furos superior e inferior do mesmo lado e dê um nó deixando cada alça de ombro com **`46 cm` a `48 cm` de volta fechada**. |
+| **Coroa Flutuante** | **`75 mm` (`7,5 cm`) de haste livre** | Na **Folha 2 (Peça 5A)**, recorte **2 tiras de acetato (`160×15mm`)**, cole uma sobre a outra (dupla camada anti-balanço) e dobre na linha verde **`★ DOBRA TIARA P/ 1,60m`**. |
+| **Varinha Mágica** | **Comprimento total `~34 cm`** (cabo de **`27 cm`**) | Junte **3 palitos de churrasco de `28 cm`** com fita adesiva (`Ø 7–8 mm`, firme na mão de `1,60 m`) e encape somando a **Tira Principal `3A` (`180mm`) + Tira Extensora `3B` (`110mm`)** da Folha 1. |
+
+---
+
 ## 📋 Lista de Materiais (Para 1 Kit Completo)
 
 > 💡 *Para fazer a dupla **Cosmo + Wanda**, dobre as quantidades de consumíveis abaixo.*
@@ -116,6 +129,19 @@ Aplicação web estática em arquivo único ([`index.html`](./index.html)) com m
 Para quem deseja uma asa maior nas costas (tamanho adulto/cosplay de **~35 cm de envergadura × 20,5 cm de altura**), a imagem da asa foi ampliada e dividida em duas folhas A4 espelhadas:
 - **Folha 3 (Metade Esquerda Ampliada — `185mm × 205mm`):** asa esquerda (`163mm`) + **Aba Central de União (`22mm × 120mm`)** com setas de registro (`▲ A1` / `▼ A2`), 4 furos de travamento (`⊕`) e manual passo a passo no rodapé.
 - **Folha 4 (Metade Direita Ampliada Espelhada — `185mm × 205mm`):** asa direita (`163mm`) espelhada (para que o lado brilhante do papel fotográfico fique virado para a frente em ambos os lados) + **Aba Central de União (`22mm × 120mm`)** + **Esquema Ilustrado em 3 Etapas** para plastificar cada metade separadamente em A4, sobrepor a aba central de `22mm` e travar mecanicamente com o elástico passando pelos 4 furos alinhados.
+
+---
+
+## 📏 Calibração Sob Medida para Estatura de 1,60 m
+
+Os moldes e marcações foram ajustados especificamente para vestir com proporção fiel ao desenho em uma pessoa de **1,60 m de altura**:
+
+| Acessório | Medida Calibrada p/ 1,60 m | Como Ajustar na Montagem |
+| :--- | :--- | :--- |
+| **Asas nas Costas** | **`348 mm × 205 mm`** (`34,8 × 20,5 cm`) | Use a **Asa Grande Dividida (Folhas 3 e 4)** — cobre perfeitamente a região das escápulas de quem tem `1,60 m` sem atrapalhar os braços. |
+| **Alças de Elástico** | **2 tiras de `55 cm`** (alça pronta: **`46 cm`**) | Passe cada tira pelos furos superior e inferior do mesmo lado e dê um nó deixando cada alça de ombro com **`46 cm` a `48 cm` de volta fechada**. |
+| **Coroa Flutuante** | **`75 mm` (`7,5 cm`) de haste livre** | Na **Folha 2 (Peça 5A)**, recorte **2 tiras de acetato (`160×15mm`)**, cole uma sobre a outra (dupla camada anti-balanço) e dobre na linha verde **`★ DOBRA TIARA P/ 1,60m`**. |
+| **Varinha Mágica** | **Comprimento total `~34 cm`** (cabo de **`27 cm`**) | Junte **3 palitos de churrasco de `28 cm`** com fita adesiva (`Ø 7–8 mm`, firme na mão de `1,60 m`) e encape somando a **Tira Principal `3A` (`180mm`) + Tira Extensora `3B` (`110mm`)** da Folha 1. |
 
 ---
 

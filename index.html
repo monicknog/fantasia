@@ -1046,15 +1046,15 @@
           </g>
 
           <!-- =========================================================================
-               3. TIRA DE REVESTIMENTO DO CABO DA VARINHA (EXATOS 180mm × 22mm)
+               3. TIRA DE REVESTIMENTO DO CABO DA VARINHA (EXATOS 180mm × 22mm + EXTENSOR 110mm × 22mm P/ 1,60m)
                Posição X: 15mm até 195mm (Largura = 180.0mm)
-               Posição Y: 242mm até 264mm (Altura = 22.0mm)
+               Posição Y: 233mm até 255mm (Altura = 22.0mm)
                ========================================================================= -->
-          <g id="wandHandleStrip" transform="translate(15, 242)">
+          <g id="wandHandleStrip" transform="translate(15, 233)">
             <!-- Cota de 180mm x 22mm -->
             <g class="tech-guide">
-              <text x="90" y="-5.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.2" font-weight="800" fill="#0F172A">
-                3. TIRA DE REVESTIMENTO DO CABO DA VARINHA (180 mm × 22 mm)
+              <text x="90" y="-5.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.1" font-weight="800" fill="#0F172A">
+                3A. TIRA PRINCIPAL DO CABO (180 × 22 mm) + 3B. EXTENSOR P/ MÃO DE 1,60m (+110 × 22 mm)
               </text>
               <line x1="0" y1="-2.2" x2="180" y2="-2.2" stroke="#0284C7" stroke-width="0.35" />
               <line x1="0" y1="-4" x2="0" y2="-0.5" stroke="#0284C7" stroke-width="0.4" />
@@ -1068,55 +1068,78 @@
               <line x1="183.5" y1="0" x2="183.5" y2="22" stroke="#0284C7" stroke-width="0.35" />
               <line x1="181.5" y1="0" x2="185" y2="0" stroke="#0284C7" stroke-width="0.4" />
               <line x1="181.5" y1="22" x2="185" y2="22" stroke="#0284C7" stroke-width="0.4" />
-              <text x="187" y="12" text-anchor="middle" transform="rotate(90 187 12)" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="#0284C7">
+              <text x="187" y="11" text-anchor="middle" transform="rotate(90 187 11)" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="#0284C7">
                 22 mm
               </text>
             </g>
 
-            <!-- Sangria externa de 1.5mm -->
-            <rect class="tech-guide" x="-1.5" y="-1.5" width="183" height="25" fill="none" stroke="#94A3B8" stroke-width="0.3" stroke-dasharray="1.5,1.5" />
-
-            <!-- Retângulo exato de 180mm x 22mm -->
+            <!-- Retângulo exato de 180mm x 22mm (Tira 3A) -->
             <rect x="0" y="0" width="180" height="22" fill="var(--wand-strip-fill)" stroke="#0F172A" stroke-width="0.9" />
-
-            <!-- Faixa decorativa mágica e área de sobreposição de cola (últimos 4mm inferiores) -->
             <rect x="0" y="0" width="6" height="22" fill="var(--wand-strip-accent)" />
             <rect x="174" y="0" width="6" height="22" fill="var(--wand-strip-accent)" />
 
-            <!-- Guia de sobreposição final ao enrolar no palito/tubo (Ø 5mm a 6mm) -->
             <g class="tech-guide">
               <rect x="0" y="18" width="180" height="4" fill="#FFFFFF" fill-opacity="0.88" />
               <line x1="0" y1="18" x2="180" y2="18" stroke="#DC2626" stroke-width="0.4" stroke-dasharray="2,1.5" />
-              <text x="90" y="20.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" font-weight="700" fill="#DC2626">
-                FAIXA DE FINALIZAÇÃO / DUPLA-FACE (4 mm) — ENROLE BEM FIRME EM PALITO CHURRASCO/HASHI OU CANUDO RÍGIDO
+              <text x="90" y="20.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" font-weight="700" fill="#DC2626">
+                FAIXA DE COLAGEM / DUPLA-FACE (4 mm) — ENROLE EM 3 PALITOS DE CHURRASCO UNIDOS (Ø 7–8 mm)
               </text>
-              <text x="90" y="10.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.8" font-weight="700" fill="var(--wand-strip-text)">
-                REVESTIMENTO DO CABO DA VARINHA — 180 mm × 22 mm
+              <text x="90" y="10.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.7" font-weight="700" fill="var(--wand-strip-text)">
+                3A. REVESTIMENTO PRINCIPAL DO CABO — 180 mm × 22 mm
               </text>
+            </g>
+
+            <!-- Peça 3B: Tira Extensora de 110mm x 22mm (Y=25..47) para cabo longo de 26–28cm (ideal p/ 1,60m) + Resumo lateral -->
+            <g transform="translate(0, 25)">
+              <rect x="0" y="0" width="110" height="22" fill="var(--wand-strip-fill)" stroke="#0F172A" stroke-width="0.9" />
+              <rect x="0" y="0" width="5" height="22" fill="var(--wand-strip-accent)" />
+              <rect x="105" y="0" width="5" height="22" fill="var(--wand-strip-accent)" />
+
+              <g class="tech-guide">
+                <rect x="0" y="18" width="110" height="4" fill="#FFFFFF" fill-opacity="0.88" />
+                <line x1="0" y1="18" x2="110" y2="18" stroke="#DC2626" stroke-width="0.4" stroke-dasharray="2,1.5" />
+                <text x="55" y="10.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.4" font-weight="700" fill="var(--wand-strip-text)">
+                  3B. EXTENSOR P/ 1,60m (110 × 22 mm)
+                </text>
+                <text x="55" y="20.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" font-weight="700" fill="#DC2626">
+                  UNE COM 3A P/ CABO DE ATÉ 28 cm
+                </text>
+
+                <!-- Quadro de calibração 1,60m ao lado da tira extensora -->
+                <rect x="114" y="0" width="66" height="22" rx="1.8" fill="#F8FAFC" stroke="#0284C7" stroke-width="0.4" />
+                <text x="147" y="4.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#0369A1">
+                  CALIBRAÇÃO P/ ESTATURA 1,60 m:
+                </text>
+                <text x="117" y="9.2" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                  • Cabo Varinha: 26 a 28 cm (use 3A + 3B)
+                </text>
+                <text x="117" y="13.2" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                  • Coroa: flutuação de 7,5 cm (Folha 2)
+                </text>
+                <text x="117" y="17.2" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                  • Asas: use Folhas 3 e 4 (35 × 20,5 cm)
+                </text>
+                <text x="117" y="20.8" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" font-weight="700" fill="#DC2626">
+                  • Alças elástico: 2× 55 cm (alça 46 cm)
+                </text>
+              </g>
             </g>
           </g>
 
           <!-- Rodapé de instruções rápidas da Folha 1 -->
-          <g class="tech-guide" transform="translate(10, 273)">
-            <rect x="0" y="0" width="190" height="15" rx="2" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.35" />
-            <text x="4" y="4.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" font-weight="800" fill="#0F172A">
-              PASSO A PASSO RÁPIDO (FOLHA 1):
-            </text>
-            <text x="4" y="8.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" fill="#334155">
-              1. Plastifique a Coroa (recorte rente ou c/ 2mm de borda) e cole as abas de 12mm formando um anel, ou cole a haste de acetato (Folha 2) na base de 15mm.
-            </text>
-            <text x="4" y="12.2" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" fill="#334155">
-              2. Enrole a tira de 180×22mm na haste rígida. Cole a ponta superior entre as duas Estrelas (Ø 95mm) e passe a estrela na plastificadora para selar.
+          <g class="tech-guide" transform="translate(10, 282)">
+            <text x="95" y="4.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="700" fill="#334155">
+              DICA 1,60m: Junte 3 palitos de churrasco (28 cm) com fita, encape com 3A + 3B e cole 3 cm da ponta entre as duas Estrelas (Ø 95 mm) antes de plastificar!
             </text>
           </g>
         </svg>
       </article>
     </div>
 
-    <!-- ==================== FOLHA 2: ASAS DE FADA E SUPORTE EM ACETATO ==================== -->
+    <!-- ==================== FOLHA 2: ASAS COMPACTAS E SUPORTE EM ACETATO ==================== -->
     <div class="sheet-wrapper">
       <div class="sheet-caption no-print">
-        <span>📄 <b>Folha 2 de 2</b> — Asas de Fada (195×115mm) + Gabarito de Suporte Invisível em Acetato (160×15mm + Abraçadeira)</span>
+        <span>📄 <b>Folha 2 de 4</b> — Gabarito de Suporte Invisível em Acetato c/ Marcação p/ 1,60m (75mm livres) + Asas Compactas (195×115mm)</span>
       </div>
 
       <article class="a4-sheet" id="sheet2" aria-label="Folha 2 A4 - Asas de Fada e Suporte de Acetato">
@@ -1363,10 +1386,12 @@
               <line x1="25" y1="0" x2="25" y2="15" stroke="#DC2626" stroke-width="0.5" stroke-dasharray="2,1.5" />
               <line x1="135" y1="0" x2="135" y2="15" stroke="#DC2626" stroke-width="0.5" stroke-dasharray="2,1.5" />
 
-              <!-- Guias de altura opcional (cortar se quiser flutuação mais baixa: 60mm ou 80mm) -->
+              <!-- Guia especial de altura calibrada para estatura de 1,60m: 75mm de flutuação livre (X=60 até X=135) -->
               <g class="tech-guide">
-                <line x1="85" y1="0" x2="85" y2="15" stroke="#64748B" stroke-width="0.35" stroke-dasharray="1,1.5" />
-                <line x1="105" y1="0" x2="105" y2="15" stroke="#64748B" stroke-width="0.35" stroke-dasharray="1,1.5" />
+                <line x1="60" y1="0" x2="60" y2="15" stroke="#15803D" stroke-width="0.6" stroke-dasharray="1.8,1.2" />
+                <text x="60" y="18.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" font-weight="800" fill="#15803D">
+                  ★ DOBRA TIARA P/ 1,60m (DEIXA 75 mm LIVRES ATÉ A COROA)
+                </text>
               </g>
 
               <text x="12.5" y="6.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" font-weight="700" fill="#0F172A">
@@ -1376,11 +1401,11 @@
                 (Dobrar em L/U)
               </text>
 
-              <text x="78" y="6.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" font-weight="800" fill="#0369A1">
-                5A. TIRA RETA DE ACETATO TRANSPARENTE (160 mm × 15 mm)
+              <text x="82" y="6.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.45" font-weight="800" fill="#0369A1">
+                5A. TIRA DE ACETATO (160 × 15 mm) — RECORTE 2× E COLE DUPLA P/ 1,60m
               </text>
-              <text x="78" y="11" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" fill="#334155">
-                Dica: Duplique a tira (2 camadas de acetato ou passe fita transparente) se quiser rigidez extra
+              <text x="82" y="11" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                Dobre na linha verde (X=60mm) p/ deixar 7,5 cm flutuando sem balançar!
               </text>
 
               <text x="147.5" y="6.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" font-weight="700" fill="#0F172A">
