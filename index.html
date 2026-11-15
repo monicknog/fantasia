@@ -527,6 +527,7 @@
       #acetateSupportSection text,
       #largeLeftWingGroup text,
       #largeRightWingGroup text,
+      .wing-template-group text,
       .accessory-text {
         display: none !important;
       }
@@ -595,10 +596,10 @@
           </div>
 
           <div class="control-item">
-            <label for="wingModeSelect">Asas:</label>
+            <label for="wingModeSelect">Tamanho da Asa:</label>
             <select id="wingModeSelect" aria-label="Selecionar tamanho das asas">
-              <option value="all" selected>🦋 Recomendado p/ 1,60m: Asa Grande Dividida 35×20,5cm (4 Folhas A4)</option>
-              <option value="compact">🦋 Apenas Asa Compacta 19,5×11,5cm (2 Folhas A4)</option>
+              <option value="giant4" selected>🦋 Asa Gigante Cosplay GG: 38 × 50 cm (Dividida em 4 Folhas A4 Cheias — Ideal p/ 1,60m)</option>
+              <option value="large2">🦋 Asa Grande Página Cheia: 38 × 28 cm (Dividida em 2 Folhas A4 Cheias)</option>
             </select>
           </div>
 
@@ -630,7 +631,7 @@
       <!-- Painel Recolhível com Checklist Interativo de Materiais -->
       <section class="materials-drawer" id="materialsDrawer" aria-label="Lista de materiais para montagem">
         <div class="materials-header">
-          <h2>📋 Lista de Materiais para Confecção (Por Kit: 1 Personagem)</h2>
+          <h2>📋 Lista de Materiais para Confecção (Por Kit: 1 Personagem de 1,60 m)</h2>
           <span>Marque os itens abaixo conforme for separando na sua bancada (para dupla Cosmo + Wanda, dobre as quantidades)</span>
         </div>
         <div class="materials-grid">
@@ -640,19 +641,19 @@
               <li>
                 <label>
                   <input type="checkbox" />
-                  <span><b>2 a 4 folhas A4 de Papel Fotográfico</b> (Glossy ou Matte, <b>180g/m² a 230g/m²</b>): 2 folhas para kit compacto ou <b>4 folhas</b> para incluir a <b>Asa Grande Dividida (35×20,5 cm)</b>.</span>
+                  <span><b>4 a 6 folhas A4 de Papel Fotográfico</b> (Glossy <b>180g/m² a 230g/m²</b>): 1 folha p/ Coroa e Varinha + 1 folha p/ Guia/Gabarito + <b>4 folhas para a Asa Gigante GG (38 × 50 cm)</b> (ou 2 folhas para a Asa Grande de 38 × 28 cm).</span>
                 </label>
               </li>
               <li>
                 <label>
                   <input type="checkbox" />
-                  <span><b>2 a 4 bolsas (pouches) de Plastificação A4</b> (espessura <b>125 a 175 micras / 0,05–0,07mm</b>) — na Asa Grande, cada metade (185×205mm) é plastificada em 1 pouch A4 antes de unir!</span>
+                  <span><b>5 bolsas (pouches) de Plastificação A4</b> (espessura <b>125 a 175 micras</b>): cada uma das 4 partes da Asa Gigante cabe inteira dentro de 1 pouch A4 comum antes de montar!</span>
                 </label>
               </li>
               <li>
                 <label>
                   <input type="checkbox" />
-                  <span><b>1 folha de Acetato Transparente A4</b> (espessura rígida de <b>200 a 300 micras / 0,20–0,30mm</b>) para a haste invisível de 160×15mm, abraçadeira e reforço central opcional da Asa Grande.</span>
+                  <span><b>1 folha de Acetato Transparente A4</b> (espessura rígida de <b>200 a 300 micras / 0,20–0,30mm</b>) para a haste invisível dupla da coroa (2× 160×15mm), abraçadeira (5B) e a <b>Placa Central de União das Asas (5C — 160×44mm)</b>.</span>
                 </label>
               </li>
             </ul>
@@ -682,7 +683,7 @@
               <li>
                 <label>
                   <input type="checkbox" />
-                  <span><b>Fita Dupla-Face Transparente</b> (extra-forte/acrílica fina) ou <b>Cola Quente / Cola de Silicone</b> para unir a haste dupla de acetato, o cabo e a aba central das asas.</span>
+                  <span><b>Fita Dupla-Face Transparente</b> (extra-forte/acrílica fina) ou <b>Cola Quente / Cola de Silicone</b> para unir a haste dupla de acetato, o cabo e as abas da Asa Gigante.</span>
                 </label>
               </li>
             </ul>
@@ -729,20 +730,34 @@
       <!-- Painel Recolhível com Dicas de Papel Fotográfico + Acetato + Plastificadora -->
       <section class="tips-drawer" id="tipsDrawer" aria-label="Dicas rápidas de montagem">
         <div class="tip-card">
-          <strong>1. Asas para Estatura 1,60 m (35×20,5 cm)</strong>
-          <p>Para uma pessoa de <b>1,60 m</b>, use a <b>Asa Grande Dividida (Folhas 3 e 4)</b>! Ela fica com <b>34,8 cm de envergadura × 20,5 cm de altura</b>, cobrindo o centro das costas com proporção idêntica ao desenho. Corte <b>2 tiras de 55 cm de elástico</b> (alça fechada de <b>46 cm</b> para cada ombro).</p>
+          <strong>👑 1. COROA: Imprime 1x ou 2x? Onde cola?</strong>
+          <p>
+            • <b>Modo Anel 3D (Imprime só 1x):</b> Recorte a coroa com a <b>Aba Lateral A</b>. Curve a coroa formando um cilindro/anel (sem vincar o meio), dobre a <b>Aba A</b> para dentro e cole atrás da <b>Borda Direita B</b>. Cole a haste de acetato por dentro na marca <b>C (15mm)</b>.<br/>
+            • <b>Modo Plana Dupla-Face (Opcional — Imprime 2x):</b> Se preferir a coroa aberta de frente, imprima 2x, corte fora a Aba A e cole uma de costas para a outra com a haste no meio!
+          </p>
         </div>
         <div class="tip-card">
-          <strong>2. Varinha Proporcional (34 cm total)</strong>
-          <p>Para não ficar fina nem curta na mão de <b>1,60 m</b>, una <b>3 palitos de churrasco de 28 cm</b> com fita adesiva formando um cilindro firme (Ø 7–8mm) e encape com a <b>Tira Principal (180mm) + Tira Extensora (110mm)</b> da Folha 1.</p>
+          <strong>🪄 2. VARINHA: Onde dobra e o que cola?</strong>
+          <p>
+            • <b>Não precisa imprimir 2x!</b> A Folha 1 já tem a <b>Estrela Frente</b> e a <b>Estrela Verso</b>.<br/>
+            • <b>Cabo (Tiras Pretas 3A + 3B):</b> Não tem dobra! Apenas <b>enrole</b> o papel ao redor de 3 palitos de churrasco juntos (como quem encapa um lápis) e cole a borda final.<br/>
+            • <b>Estrelas (Sem dobras!):</b> Coloque <b>3,5 cm da ponta do cabo</b> no meio das 2 estrelas e cole uma estrela contra a outra (<b>Sanduíche: Frente + Cabo no meio + Verso</b>).
+          </p>
         </div>
         <div class="tip-card">
-          <strong>3. Coroa Flutuante Estável (7,5 cm livre)</strong>
-          <p>Na Folha 2, recorte <b>2 tiras de acetato de 160×15mm</b> e cole uma sobre a outra (dupla camada). Dobre na linha <b>★ Altura Ideal 1,60m (75mm livres)</b> para a coroa flutuar acima do cabelo sem balançar ao andar!</p>
+          <strong>🦋 3. ASA GIGANTE GG P/ 1,60 m (38 × 50 cm em 4 Folhas A4)</strong>
+          <p>
+            • Removemos a asa pequena! Agora cada lóbulo da asa ocupa <b>1 folha A4 inteira</b>:<br/>
+            • <b>Folha 3 (Sup. Esq.) + Folha 5 (Inf. Esq.)</b> = Asa Esquerda Gigante (50 cm de altura).<br/>
+            • <b>Folha 4 (Sup. Dir.) + Folha 6 (Inf. Dir.)</b> = Asa Direita Gigante (50 cm de altura).<br/>
+            • Plastifique cada uma das 4 folhas em A4, una as abas <b>B1–B2 / C1–C2</b> (meio horizontal) e <b>A1–A2</b> (centro vertical com a <b>Placa de Acetato 5C</b> atrás) e fure os 4 pontos (⊕)!
+          </p>
         </div>
         <div class="tip-card">
-          <strong>4. Impressão em Papel Fotográfico</strong>
-          <p>Use papel fotográfico glossy ou matte 180g–230g. Na janela de impressão, selecione <b>Tamanho A4</b>, <b>Margens: Nenhuma</b> e <b>Escala: 100% (Tamanho Real)</b>. Confira a régua de 50mm no topo!</p>
+          <strong>🖨️ 4. Impressão Limpa (Sem Textos nos Acessórios)</strong>
+          <p>
+            Na tela você vê os nomes e instruções em cima das peças para entender a montagem, mas <b>ao clicar em Imprimir A4 ou Baixar PDF A4, todos os textos de cima dos acessórios somem automaticamente</b>!
+          </p>
         </div>
       </section>
     </div>
@@ -754,7 +769,7 @@
     <!-- ==================== FOLHA 1: COROA, ESTRELA DA VARINHA E CABO ==================== -->
     <div class="sheet-wrapper">
       <div class="sheet-caption no-print">
-        <span>📄 <b>Folha 1 de 4</b> — Coroa Flutuante (~170mm) + Estrelas da Varinha (Ø 95mm) + Revestimento do Cabo p/ 1,60m (180×22mm + Extensor 110×22mm)</span>
+        <span>📄 <b>Folha 1</b> — Coroa Flutuante (~170mm) + Estrelas da Varinha (Ø 95mm Frente e Verso) + Revestimento do Cabo p/ 1,60m (180×22mm + Extensor 110×22mm)</span>
       </div>
 
       <article class="a4-sheet" id="sheet1" aria-label="Folha 1 A4 - Coroa e Varinha">
@@ -787,11 +802,11 @@
 
           <!-- CABEÇALHO E RÉGUA DE CALIBRAÇÃO FÍSICA DE EXATOS 50mm -->
           <g transform="translate(10, 8)">
-            <text x="0" y="4.5" font-family="Segoe UI, Arial, sans-serif" font-size="3.8" font-weight="800" fill="#0F172A">
-              PADRINHOS MÁGICOS — FOLHA 1/2 (COROA FLUTUANTE &amp; VARINHA)
+            <text class="accessory-text" x="0" y="4.5" font-family="Segoe UI, Arial, sans-serif" font-size="3.8" font-weight="800" fill="#0F172A">
+              PADRINHOS MÁGICOS — FOLHA 1/4 (COROA FLUTUANTE &amp; VARINHA)
             </text>
-            <text x="0" y="8.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" fill="#475569">
-              Legenda: [ ─── Linha Contínua = CORTE ]   [ - - - Linha Tracejada = DOBRA / VINCO ]   [ - · - Pontilhada = BORDA DE PLASTIFICAÇÃO ]
+            <text class="accessory-text" x="0" y="8.5" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" fill="#475569">
+              Legenda: [ ─── Linha Contínua = CORTE ]   [ - - - Linha Tracejada = DOBRA ]   (Textos sobre as peças não saem na impressão)
             </text>
 
             <!-- Régua de Calibração de exatos 50mm (x=135 até x=185 -> largura = 50.0mm) -->
@@ -828,54 +843,39 @@
           </g>
 
           <!-- =========================================================================
-               1. COROA FLUTUANTE (LARGURA DO CORPO = 170mm | TOTAL C/ ABAS = 194mm)
-               Posição Y: 25mm a 108mm (Altura da coroa = 78mm)
-               Centro X da folha = 105mm -> Corpo vai de X=20mm até X=190mm (170mm exatos)
-               Abas laterais de colagem/fechamento: 12mm cada lado (X=8..20 e X=190..202)
+               1. COROA FLUTUANTE (LARGURA DO CORPO = 170mm + 1 ABA ESQUERDA DE 14mm)
+               Como montar (Imprime 1x só):
+                 - Recorte no contorno contínuo externo.
+                 - Curve a coroa formando um anel redondo (cilindro).
+                 - Dobre apenas na linha tracejada da ABA "A" (esquerda), passe cola na ABA "A"
+                   e cole por trás da BORDA "B" (direita) para fechar o anel!
+                 - Cole a ponta da haste transparente de acetato por dentro na marca "C" (15mm).
                ========================================================================= -->
           <g id="crownGroup">
             <!-- Cota superior de 170mm -->
             <g class="tech-guide">
-              <line x1="20" y1="24" x2="190" y2="24" stroke="#0284C7" stroke-width="0.35" />
-              <line x1="20" y1="22" x2="20" y2="26" stroke="#0284C7" stroke-width="0.4" />
-              <line x1="190" y1="22" x2="190" y2="26" stroke="#0284C7" stroke-width="0.4" />
-              <rect x="73" y="21.2" width="64" height="5" fill="#FFFFFF" />
-              <text x="105" y="24.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.7" font-weight="700" fill="#0284C7">
-                LARGURA DA COROA: 170 mm (+ abas 12 mm)
+              <line x1="22" y1="24" x2="192" y2="24" stroke="#0284C7" stroke-width="0.35" />
+              <line x1="22" y1="22" x2="22" y2="26" stroke="#0284C7" stroke-width="0.4" />
+              <line x1="192" y1="22" x2="192" y2="26" stroke="#0284C7" stroke-width="0.4" />
+              <rect class="accessory-text" x="65" y="21.2" width="84" height="5" fill="#FFFFFF" />
+              <text x="107" y="24.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.6" font-weight="700" fill="#0284C7">
+                1. COROA: CORPO DE 170 mm + 1 ABA ESQUERDA DE FECHAMENTO (14 mm)
               </text>
             </g>
 
-            <!-- Sangria externa amarela suave (2mm) para evitar filete branco no corte -->
-            <path class="tech-guide"
-              d="M 6,62 L 18,26 L 62.5,63 L 105,25 L 147.5,63 L 192,26 L 204,62 L 204,104 L 191,110 L 19,110 L 6,104 Z"
-              fill="none" stroke="#FDE047" stroke-width="0.4" stroke-dasharray="1.5,1.5" />
+            <!-- ÚNICA ABA LATERAL DE FECHAMENTO EM ANEL ("ABA A": X=8..22, largura 14mm) -->
+            <polygon points="8,62 22,54 22,108 8,102" fill="var(--crown-inner-tab)" stroke="var(--crown-stroke)" stroke-width="0.8" stroke-linejoin="round" />
+            <polygon points="8,62 22,54 22,108 8,102" fill="url(#glueHatch)" opacity="0.35" />
 
-            <!-- Abas laterais de colagem/fechamento em anel ou verso -->
-            <polygon points="8,64 20,56 20,108 8,102" fill="var(--crown-inner-tab)" stroke="var(--crown-stroke)" stroke-width="0.7" stroke-linejoin="round" />
-            <polygon points="8,64 20,56 20,108 8,102" fill="url(#glueHatch)" opacity="0.35" />
-
-            <polygon points="190,56 202,64 202,102 190,108" fill="var(--crown-inner-tab)" stroke="var(--crown-stroke)" stroke-width="0.7" stroke-linejoin="round" />
-            <polygon points="190,56 202,64 202,102 190,108" fill="url(#glueHatch)" opacity="0.35" />
-
-            <!-- Aba inferior de encaixe/reforço da haste de acetato (15mm central: X=97.5 a X=112.5) -->
-            <polygon points="95,108 115,108 112.5,116 97.5,116" fill="var(--crown-inner-tab)" stroke="var(--crown-stroke)" stroke-width="0.6" stroke-dasharray="1.5,1" />
-
-            <!-- Corpo Principal da Coroa de 3 Pontas (Estilo Padrinhos Mágicos icônico)
-                 Ponta Esquerda: (20, 30)
-                 Vale Esquerdo:  (63.5, 67)
-                 Ponta Central:  (105, 28)
-                 Vale Direito:   (146.5, 67)
-                 Ponta Direita:  (190, 30)
-                 Base Inferior:  (190, 108) -> (20, 108) com leve curvatura estilizada
-            -->
+            <!-- Corpo Principal da Coroa de 3 Pontas (X=22 até X=192 -> 170mm exatos) -->
             <path
-              d="M 20,108
-                 L 20,30
-                 L 63.5,67
-                 L 105,28
-                 L 146.5,67
-                 L 190,30
-                 L 190,108
+              d="M 22,108
+                 L 22,30
+                 L 65.5,67
+                 L 107,28
+                 L 148.5,67
+                 L 192,30
+                 L 192,108
                  Z"
               fill="url(#crownGrad1)"
               stroke="var(--crown-stroke)"
@@ -884,81 +884,65 @@
 
             <!-- Brilho cartoon interno nas pontas da coroa -->
             <path
-              d="M 25,98 L 25,41 L 61,71"
+              d="M 27,98 L 27,41 L 63,71"
               fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55" />
             <path
-              d="M 105,36 L 105,96"
+              d="M 107,36 L 107,96"
               fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" opacity="0.35" />
 
-            <!-- Linhas de dobra das abas laterais (X=20mm e X=190mm) e divisórias de facetas -->
+            <!-- Guias de Dobra da Aba A e Local de Colagem da Haste C -->
             <g class="tech-guide">
-              <!-- Dobras das abas de colagem -->
-              <line x1="20" y1="56" x2="20" y2="108" stroke="#DC2626" stroke-width="0.6" stroke-dasharray="2.5,1.8" />
-              <line x1="190" y1="56" x2="190" y2="108" stroke="#DC2626" stroke-width="0.6" stroke-dasharray="2.5,1.8" />
+              <!-- Única linha de dobra da coroa: dobra da ABA A (X=22mm) -->
+              <line x1="22" y1="54" x2="22" y2="108" stroke="#DC2626" stroke-width="0.75" stroke-dasharray="2.5,1.8" />
 
-              <!-- Vinco suave de curvatura nas duas cavidades (vales) para efeito 3D ou curva -->
-              <line x1="63.5" y1="67" x2="63.5" y2="108" stroke="#475569" stroke-width="0.4" stroke-dasharray="2,2" />
-              <line x1="146.5" y1="67" x2="146.5" y2="108" stroke="#475569" stroke-width="0.4" stroke-dasharray="2,2" />
+              <!-- Indicação da Borda Direita B (onde a Aba A vai colada por trás para fechar o anel) -->
+              <line x1="189" y1="54" x2="189" y2="106" stroke="#15803D" stroke-width="0.5" stroke-dasharray="1.5,1.5" />
 
-              <!-- Textos das abas -->
-              <text x="14" y="84" text-anchor="middle" transform="rotate(-90 14 84)" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" font-weight="700" fill="#1E293B">
-                ABA DE COLAGEM (12mm)
+              <!-- Textos explicativos na Aba A e Borda B (ocultos na impressão) -->
+              <text x="15" y="82" text-anchor="middle" transform="rotate(-90 15 82)" font-family="Segoe UI, Arial, sans-serif" font-size="2.35" font-weight="800" fill="#DC2626">
+                ABA "A": DOBRE E PASSE COLA AQUI
               </text>
-              <text x="196" y="84" text-anchor="middle" transform="rotate(90 196 84)" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" font-weight="700" fill="#1E293B">
-                ABA DE COLAGEM (12mm)
+              <text x="185" y="80" text-anchor="middle" transform="rotate(-90 185 80)" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#15803D">
+                BORDA "B": COLE A ABA "A" AQUI POR TRÁS
               </text>
 
-              <!-- Marcação central de exatos 15mm na base (X=97.5mm até X=112.5mm) para fixação da haste de acetato -->
-              <rect x="97.5" y="100" width="15" height="8" fill="#FFFFFF" fill-opacity="0.85" stroke="#0284C7" stroke-width="0.6" stroke-dasharray="1.5,1" />
-              <!-- Fenda de encaixe opcional (slot de 15mm) -->
-              <line x1="97.5" y1="104" x2="112.5" y2="104" stroke="#DC2626" stroke-width="0.7" />
-              <text x="105" y="98.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.5" font-weight="800" fill="#0284C7">
-                ENCAIXE HASTE ACETATO (15 mm)
-              </text>
-              <text x="105" y="113.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="700" fill="#475569">
-                15 mm
+              <!-- Marcação central de exatos 15mm na base (X=99.5mm até X=114.5mm) para fixação da haste de acetato -->
+              <rect x="99.5" y="99" width="15" height="9" fill="none" stroke="#0284C7" stroke-width="0.65" stroke-dasharray="1.8,1.2" />
+              <text x="107" y="97.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.35" font-weight="800" fill="#0284C7">
+                LOCAL "C" (15 mm): COLE A PONTA DA HASTE DE ACETATO AQUI POR DENTRO
               </text>
 
-              <!-- Rótulo da peça -->
-              <text x="105" y="82" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.6" font-weight="800" fill="#0F172A" opacity="0.75">
-                1. COROA FLUTUANTE (170 mm × 80 mm)
+              <!-- Explicação direta no centro da Coroa (oculta na impressão) -->
+              <text x="107" y="76" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.4" font-weight="800" fill="#0F172A">
+                1. COROA FLUTUANTE (IMPRIME SÓ 1 VEZ!)
               </text>
-              <text x="105" y="86.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.4" fill="#334155">
-                Feche em cilindro pelas abas laterais ou plastifique aberta levemente curvada
+              <text x="107" y="81" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="#334155">
+                Não dobre o meio: apenas curve formando um anel redondo e cole a ABA "A" atrás da BORDA "B"
+              </text>
+              <text x="107" y="85.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#475569">
+                (Opcional: se preferir a coroa reta/aberta dos 2 lados sem fechar em anel, imprima 2x e cole Frente + Verso)
               </text>
             </g>
           </g>
 
           <!-- =========================================================================
                2. ESTRELA DA VARINHA — FRENTE E VERSO ESPELHADOS (Ø ~95mm)
-               Diâmetro circunscrito: 95mm (Raio externo R = 47.5mm, Raio interno r = 21.5mm)
-               Estrela A (FRENTE): Centro em (56, 174)
-               Estrela B (VERSO):  Centro em (154, 174)
-               Coordenadas relativas ao centro (0,0) para R=47.5mm, r=21.5mm:
-                 P1 (Topo -90°):       (0.00, -47.50)
-                 V1 (-54°):            (12.64, -17.39)
-                 P2 (-18°):            (45.18, -14.68)
-                 V2 (+18°):            (20.45, +6.64)
-                 P3 (+54°):            (27.92, +38.43)
-                 V3 (+90° Base):       (0.00, +21.50)
-                 P4 (+126°):           (-27.92, +38.43)
-                 V4 (+162°):           (-20.45, +6.64)
-                 P5 (-162°):           (-45.18, -14.68)
-                 V5 (-126°):           (-12.64, -17.39)
+               Não tem dobras! Recorte as 2 estrelas abaixo, coloque a ponta do cabo (3,5 cm)
+               no meio das duas e cole uma estrela de costas para a outra (Sanduíche).
                ========================================================================= -->
           <g id="starsSection">
             <!-- Título da seção de estrelas -->
             <g class="tech-guide">
-              <text x="105" y="123.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.3" font-weight="800" fill="#0F172A">
-                2. ESTRELA DA VARINHA — FRENTE E VERSO ESPELHADOS (Ø 95 mm)
+              <text x="105" y="117.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.1" font-weight="800" fill="#0F172A">
+                2. ESTRELAS DA VARINHA — FRENTE E VERSO JÁ INCLUÍDOS (Ø 95 mm — SEM DOBRAS!)
               </text>
-              <text x="105" y="127.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" fill="#475569">
-                Cole Frente + Verso alinhados com o cabo no centro e passe na plastificadora (deixe 3 mm de borda selada ao recortar)
+              <text x="105" y="121.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.25" fill="#475569">
+                Recorte as 2 estrelas no contorno preto, ponha 3,5 cm do cabo no meio delas e cole uma contra a outra (Sanduíche)
               </text>
             </g>
 
-            <!-- ESTRELA 1: FRENTE (Centro X=56, Y=175) -->
-            <g transform="translate(56, 175)">
+            <!-- ESTRELA 1: FRENTE (Centro X=56, Y=172) -->
+            <g transform="translate(56, 172)">
               <!-- Margem externa para plastificação/laminação (+3.5mm) -->
               <polygon class="tech-guide"
                 points="0,-51.5 14.2,-19.5 49,-15.9 22.8,7.4 30.3,41.7 0,24.2 -30.3,41.7 -22.8,7.4 -49,-15.9 -14.2,-19.5"
@@ -969,10 +953,7 @@
                 points="0,-49 13.3,-18.2 46.6,-15.1 21.3,6.9 28.8,39.6 0,22.5 -28.8,39.6 -21.3,6.9 -46.6,-15.1 -13.3,-18.2"
                 fill="var(--star-bleed)" stroke="none" opacity="0.55" />
 
-              <!-- Aba inferior de encaixe/colagem do cabo (largura 10mm) -->
-              <rect x="-5" y="19" width="10" height="23" rx="1.5" fill="var(--crown-inner-tab)" stroke="var(--star-stroke)" stroke-width="0.6" stroke-dasharray="1.8,1.2" />
-
-              <!-- Estrela Principal Ø 95mm (R=47.5mm) com cantos levemente arredondados estilo cartoon -->
+              <!-- Estrela Principal Ø 95mm (R=47.5mm) limpa, sem aba saliente -->
               <polygon
                 points="0,-47.5 12.64,-17.39 45.18,-14.68 20.45,6.64 27.92,38.43 0,21.5 -27.92,38.43 -20.45,6.64 -45.18,-14.68 -12.64,-17.39"
                 fill="url(#starGrad1)"
@@ -983,32 +964,29 @@
               <!-- Brilho interno da estrela -->
               <path d="M -2,-38 L 9,-15 L 34,-12" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
 
-              <!-- Guia de posicionamento do cabo (haste central inferior) -->
+              <!-- Guia interna mostrando onde a ponta do cabo entra no meio do sanduíche -->
               <g class="tech-guide">
-                <rect x="-3.5" y="5" width="7" height="36" fill="none" stroke="#DC2626" stroke-width="0.45" stroke-dasharray="2,1.5" />
-                <line x1="0" y1="-8" x2="0" y2="42" stroke="#DC2626" stroke-width="0.35" stroke-dasharray="1.5,1.5" />
-                <text x="0" y="-2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.1" font-weight="800" fill="#0F172A">
-                  ESTRELA — FRENTE
+                <rect x="-3.5" y="-12" width="7" height="33.5" fill="none" stroke="#DC2626" stroke-width="0.5" stroke-dasharray="2,1.5" />
+                <text x="0" y="-16" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.0" font-weight="800" fill="#0F172A">
+                  ESTRELA — LADO 1 (FRENTE)
                 </text>
-                <text x="0" y="2.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="#334155">
-                  Ø 95 mm (Raio 47,5 mm)
+                <text x="0" y="7" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" font-weight="800" fill="#DC2626">
+                  ↑ COLE A PONTA DO CABO
                 </text>
-                <text x="0" y="33" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" font-weight="700" fill="#DC2626">
-                  ENCAIXE CABO (7mm)
+                <text x="0" y="10.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" font-weight="700" fill="#DC2626">
+                  AQUI POR DENTRO (3,5 cm)
                 </text>
                 <!-- Cota Ø 95mm -->
                 <line x1="-45.18" y1="-49.5" x2="45.18" y2="-49.5" stroke="#0284C7" stroke-width="0.3" />
-                <line x1="-45.18" y1="-51" x2="-45.18" y2="-15" stroke="#0284C7" stroke-width="0.2" stroke-dasharray="1,1" />
-                <line x1="45.18" y1="-51" x2="45.18" y2="-15" stroke="#0284C7" stroke-width="0.2" stroke-dasharray="1,1" />
-                <rect x="-16" y="-51.8" width="32" height="4" fill="#FFFFFF" />
+                <rect class="accessory-text" x="-16" y="-51.8" width="32" height="4" fill="#FFFFFF" />
                 <text x="0" y="-48.9" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="#0284C7">
                   Ø 95 mm
                 </text>
               </g>
             </g>
 
-            <!-- ESTRELA 2: VERSO ESPELHADO (Centro X=154, Y=175) -->
-            <g transform="translate(154, 175)">
+            <!-- ESTRELA 2: VERSO ESPELHADO (Centro X=154, Y=172) -->
+            <g transform="translate(154, 172)">
               <!-- Margem externa para plastificação/laminação (+3.5mm) -->
               <polygon class="tech-guide"
                 points="0,-51.5 14.2,-19.5 49,-15.9 22.8,7.4 30.3,41.7 0,24.2 -30.3,41.7 -22.8,7.4 -49,-15.9 -14.2,-19.5"
@@ -1019,10 +997,7 @@
                 points="0,-49 13.3,-18.2 46.6,-15.1 21.3,6.9 28.8,39.6 0,22.5 -28.8,39.6 -21.3,6.9 -46.6,-15.1 -13.3,-18.2"
                 fill="var(--star-bleed)" stroke="none" opacity="0.55" />
 
-              <!-- Aba inferior de encaixe/colagem do cabo (largura 10mm) -->
-              <rect x="-5" y="19" width="10" height="23" rx="1.5" fill="var(--crown-inner-tab)" stroke="var(--star-stroke)" stroke-width="0.6" stroke-dasharray="1.8,1.2" />
-
-              <!-- Estrela Principal Ø 95mm (R=47.5mm) -->
+              <!-- Estrela Principal Ø 95mm (R=47.5mm) limpa, sem aba saliente -->
               <polygon
                 points="0,-47.5 12.64,-17.39 45.18,-14.68 20.45,6.64 27.92,38.43 0,21.5 -27.92,38.43 -20.45,6.64 -45.18,-14.68 -12.64,-17.39"
                 fill="url(#starGrad1)"
@@ -1033,51 +1008,30 @@
               <!-- Brilho interno espelhado -->
               <path d="M 2,-38 L -9,-15 L -34,-12" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
 
-              <!-- Guia de posicionamento do cabo (haste central inferior) -->
+              <!-- Guia interna mostrando onde a ponta do cabo entra no meio do sanduíche -->
               <g class="tech-guide">
-                <rect x="-3.5" y="5" width="7" height="36" fill="none" stroke="#DC2626" stroke-width="0.45" stroke-dasharray="2,1.5" />
-                <line x1="0" y1="-8" x2="0" y2="42" stroke="#DC2626" stroke-width="0.35" stroke-dasharray="1.5,1.5" />
-                <text x="0" y="-2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.1" font-weight="800" fill="#0F172A">
-                  ESTRELA — VERSO
+                <rect x="-3.5" y="-12" width="7" height="33.5" fill="none" stroke="#DC2626" stroke-width="0.5" stroke-dasharray="2,1.5" />
+                <text x="0" y="-16" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.0" font-weight="800" fill="#0F172A">
+                  ESTRELA — LADO 2 (VERSO)
                 </text>
-                <text x="0" y="2.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="#334155">
-                  Ø 95 mm (Espelhada)
+                <text x="0" y="7" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" font-weight="800" fill="#DC2626">
+                  ↑ COLE POR CIMA DO CABO
                 </text>
-                <text x="0" y="33" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" font-weight="700" fill="#DC2626">
-                  ENCAIXE CABO (7mm)
-                </text>
-                <text x="0" y="48.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#0284C7">
-                  Linha tracejada azul = margem de plastificação (+3,5 mm)
+                <text x="0" y="10.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" font-weight="700" fill="#DC2626">
+                  FECHANDO O "SANDUÍCHE"
                 </text>
               </g>
             </g>
           </g>
 
           <!-- =========================================================================
-               3. TIRA DE REVESTIMENTO DO CABO DA VARINHA (EXATOS 180mm × 22mm + EXTENSOR 110mm × 22mm P/ 1,60m)
-               Posição X: 15mm até 195mm (Largura = 180.0mm)
-               Posição Y: 233mm até 255mm (Altura = 22.0mm)
+               3. TIRAS PRETAS PARA ENCAPAR O PALITO DO CABO (180×22mm + 110×22mm)
+               Não tem dobra! Apenas enrole ao redor dos palitos dando voltas e cole a borda.
                ========================================================================= -->
-          <g id="wandHandleStrip" transform="translate(15, 233)">
-            <!-- Cota de 180mm x 22mm -->
+          <g id="wandHandleStrip" transform="translate(15, 226)">
             <g class="tech-guide">
-              <text x="90" y="-5.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.1" font-weight="800" fill="#0F172A">
-                3A. TIRA PRINCIPAL DO CABO (180 × 22 mm) + 3B. EXTENSOR P/ MÃO DE 1,60m (+110 × 22 mm)
-              </text>
-              <line x1="0" y1="-2.2" x2="180" y2="-2.2" stroke="#0284C7" stroke-width="0.35" />
-              <line x1="0" y1="-4" x2="0" y2="-0.5" stroke="#0284C7" stroke-width="0.4" />
-              <line x1="180" y1="-4" x2="180" y2="-0.5" stroke="#0284C7" stroke-width="0.4" />
-              <rect x="72" y="-4.2" width="36" height="3.6" fill="#FFFFFF" />
-              <text x="90" y="-1.4" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.4" font-weight="700" fill="#0284C7">
-                180 mm
-              </text>
-
-              <!-- Cota vertical 22mm -->
-              <line x1="183.5" y1="0" x2="183.5" y2="22" stroke="#0284C7" stroke-width="0.35" />
-              <line x1="181.5" y1="0" x2="185" y2="0" stroke="#0284C7" stroke-width="0.4" />
-              <line x1="181.5" y1="22" x2="185" y2="22" stroke="#0284C7" stroke-width="0.4" />
-              <text x="187" y="11" text-anchor="middle" transform="rotate(90 187 11)" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="#0284C7">
-                22 mm
+              <text x="90" y="-3.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.9" font-weight="800" fill="#0F172A">
+                3. TIRAS PARA ENCAPAR O PALITO DA VARINHA (SEM DOBRAS — APENAS ENROLAR NO PALITO!)
               </text>
             </g>
 
@@ -1087,57 +1041,44 @@
             <rect x="174" y="0" width="6" height="22" fill="var(--wand-strip-accent)" />
 
             <g class="tech-guide">
-              <rect x="0" y="18" width="180" height="4" fill="#FFFFFF" fill-opacity="0.88" />
-              <line x1="0" y1="18" x2="180" y2="18" stroke="#DC2626" stroke-width="0.4" stroke-dasharray="2,1.5" />
-              <text x="90" y="20.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" font-weight="700" fill="#DC2626">
-                FAIXA DE COLAGEM / DUPLA-FACE (4 mm) — ENROLE EM 3 PALITOS DE CHURRASCO UNIDOS (Ø 7–8 mm)
+              <line x1="0" y1="18" x2="180" y2="18" stroke="#DC2626" stroke-width="0.45" stroke-dasharray="2,1.5" />
+              <text x="90" y="9.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.6" font-weight="700" fill="var(--wand-strip-text)">
+                3A. TIRA PRINCIPAL DO CABO (180 × 22 mm) — ENROLE DANDO VOLTAS NO PALITO
               </text>
-              <text x="90" y="10.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.7" font-weight="700" fill="var(--wand-strip-text)">
-                3A. REVESTIMENTO PRINCIPAL DO CABO — 180 mm × 22 mm
+              <text x="90" y="15.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="var(--wand-strip-text)">
+                Passe cola ou fita dupla-face na borda inferior (4 mm) para fechar o rolinho no palito
               </text>
             </g>
 
-            <!-- Peça 3B: Tira Extensora de 110mm x 22mm (Y=25..47) para cabo longo de 26–28cm (ideal p/ 1,60m) + Resumo lateral -->
+            <!-- Peça 3B: Tira Extensora de 110mm x 22mm (Y=25..47) + Diagrama Ilustrado Coroa & Varinha -->
             <g transform="translate(0, 25)">
               <rect x="0" y="0" width="110" height="22" fill="var(--wand-strip-fill)" stroke="#0F172A" stroke-width="0.9" />
               <rect x="0" y="0" width="5" height="22" fill="var(--wand-strip-accent)" />
               <rect x="105" y="0" width="5" height="22" fill="var(--wand-strip-accent)" />
 
               <g class="tech-guide">
-                <rect x="0" y="18" width="110" height="4" fill="#FFFFFF" fill-opacity="0.88" />
-                <line x1="0" y1="18" x2="110" y2="18" stroke="#DC2626" stroke-width="0.4" stroke-dasharray="2,1.5" />
-                <text x="55" y="10.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.4" font-weight="700" fill="var(--wand-strip-text)">
+                <line x1="0" y1="18" x2="110" y2="18" stroke="#DC2626" stroke-width="0.45" stroke-dasharray="2,1.5" />
+                <text x="55" y="9.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="var(--wand-strip-text)">
                   3B. EXTENSOR P/ 1,60m (110 × 22 mm)
                 </text>
-                <text x="55" y="20.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" font-weight="700" fill="#DC2626">
-                  UNE COM 3A P/ CABO DE ATÉ 28 cm
-                </text>
-
-                <!-- Quadro de calibração 1,60m ao lado da tira extensora -->
-                <rect x="114" y="0" width="66" height="22" rx="1.8" fill="#F8FAFC" stroke="#0284C7" stroke-width="0.4" />
-                <text x="147" y="4.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#0369A1">
-                  CALIBRAÇÃO P/ ESTATURA 1,60 m:
-                </text>
-                <text x="117" y="9.2" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
-                  • Cabo Varinha: 26 a 28 cm (use 3A + 3B)
-                </text>
-                <text x="117" y="13.2" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
-                  • Coroa: flutuação de 7,5 cm (Folha 2)
-                </text>
-                <text x="117" y="17.2" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
-                  • Asas: use Folhas 3 e 4 (35 × 20,5 cm)
-                </text>
-                <text x="117" y="20.8" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" font-weight="700" fill="#DC2626">
-                  • Alças elástico: 2× 55 cm (alça 46 cm)
+                <text x="55" y="15.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="var(--wand-strip-text)">
+                  Enrole na continuação de 3A p/ cabo de 28 cm
                 </text>
               </g>
             </g>
           </g>
 
-          <!-- Rodapé de instruções rápidas da Folha 1 -->
-          <g class="tech-guide" transform="translate(10, 282)">
-            <text x="95" y="4.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="700" fill="#334155">
-              DICA 1,60m: Junte 3 palitos de churrasco (28 cm) com fita, encape com 3A + 3B e cole 3 cm da ponta entre as duas Estrelas (Ø 95 mm) antes de plastificar!
+          <!-- RODAPÉ VISUAL ILUSTRADO DA FOLHA 1 (OCULTO NA IMPRESSÃO PARA ECONOMIZAR TINTA) -->
+          <g class="tech-guide accessory-text" transform="translate(10, 275)">
+            <rect x="0" y="0" width="190" height="16" rx="2" fill="#F8FAFC" stroke="#0284C7" stroke-width="0.35" />
+            <text x="4" y="4.8" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="800" fill="#0F172A">
+              RESUMO DE COLAGEM (FOLHA 1):
+            </text>
+            <text x="4" y="9.3" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#334155">
+              • COROA (Imprime 1x): Curve em círculo (anel) e cole a ABA "A" atrás da BORDA "B". Cole a haste transparente de acetato por dentro na marca "C".
+            </text>
+            <text x="4" y="13.6" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#334155">
+              • VARINHA (Imprime 1x): Enrole as tiras pretas (3A+3B) nos palitos. Ponha 3,5 cm da ponta do cabo entre as 2 Estrelas e cole Frente + Verso!
             </text>
           </g>
         </svg>
@@ -2131,6 +2072,13 @@
 
         const clone = svgElement.cloneNode(true);
         const hideGuides = document.body.classList.contains('hide-guides');
+
+        // Remover todos os textos escritos sobre/nos acessórios no modo de impressão/PDF
+        clone.querySelectorAll(
+          '#crownGroup text, #starsSection text, #wandHandleStrip text, #fairyWingsGroup text, #acetateSupportSection text, #largeLeftWingGroup text, #largeRightWingGroup text, .accessory-text'
+        ).forEach(function (el) {
+          el.remove();
+        });
 
         if (hideGuides) {
           clone.querySelectorAll('.tech-guide').forEach(function (el) {
