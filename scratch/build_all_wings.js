@@ -448,3 +448,4 @@ afterMain = afterMain.replace(
 const finalHtml = beforeFolha2 + middle + '  </main>' + afterMain;
 fs.writeFileSync('c:/Projetos/fantasia/index.html', finalHtml, 'utf8');
 console.log('BUILD FINISHED! Total size:', finalHtml.length);
+
