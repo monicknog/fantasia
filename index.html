@@ -769,7 +769,7 @@
     <!-- ==================== FOLHA 1: COROA, ESTRELA DA VARINHA E CABO ==================== -->
     <div class="sheet-wrapper">
       <div class="sheet-caption no-print">
-        <span>📄 <b>Folha 1</b> — Coroa Flutuante (~170mm) + Estrelas da Varinha (Ø 95mm Frente e Verso) + Revestimento do Cabo p/ 1,60m (180×22mm + Extensor 110×22mm)</span>
+        <span>📄 <b>Folha 1</b> — Coroa Estilo Desenho Animado (Frente e Verso 85×50mm — Sem cilindro!) + Estrelas da Varinha (Ø 95mm) + Revestimento do Cabo (180×22mm + 110×22mm)</span>
       </div>
 
       <article class="a4-sheet" id="sheet1" aria-label="Folha 1 A4 - Coroa e Varinha">
@@ -851,76 +851,138 @@
                    e cole por trás da BORDA "B" (direita) para fechar o anel!
                  - Cole a ponta da haste transparente de acetato por dentro na marca "C" (15mm).
                ========================================================================= -->
+          <!-- =========================================================================
+               1. COROA FLUTUANTE ESTILO DESENHO ANIMADO (85mm × 50mm — SEM CILINDRO!)
+               Proporção idêntica à do desenho animado (Cosmo e Wanda):
+                 - Não é cilindro nem anel grande: é uma coroinha plana clássica de 3 pontas.
+                 - Já vem com FRENTE e VERSO ESPELHADOS lado a lado!
+                 - Como montar: recorte as 2 faces (Frente e Verso), plastifique, coloque a ponta
+                   da haste de acetato (15mm) no meio da base e cole uma de costas para a outra (Sanduíche).
+               ========================================================================= -->
           <g id="crownGroup">
-            <!-- Cota superior de 170mm -->
+            <!-- Cota superior de 85mm e título da seção -->
             <g class="tech-guide">
-              <line x1="22" y1="24" x2="192" y2="24" stroke="#0284C7" stroke-width="0.35" />
-              <line x1="22" y1="22" x2="22" y2="26" stroke="#0284C7" stroke-width="0.4" />
-              <line x1="192" y1="22" x2="192" y2="26" stroke="#0284C7" stroke-width="0.4" />
-              <rect class="accessory-text" x="65" y="21.2" width="84" height="5" fill="#FFFFFF" />
-              <text x="107" y="24.8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.6" font-weight="700" fill="#0284C7">
-                1. COROA: CORPO DE 170 mm + 1 ABA ESQUERDA DE FECHAMENTO (14 mm)
+              <rect class="accessory-text" x="15" y="20.5" width="180" height="5" fill="#FFFFFF" />
+              <text x="105" y="24.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.7" font-weight="800" fill="#0284C7">
+                1. COROA DO DESENHO (85 mm × 50 mm) — SEM CILINDRO! FRENTE E VERSO ESPELHADOS
               </text>
             </g>
 
-            <!-- ÚNICA ABA LATERAL DE FECHAMENTO EM ANEL ("ABA A": X=8..22, largura 14mm) -->
-            <polygon points="8,62 22,54 22,108 8,102" fill="var(--crown-inner-tab)" stroke="var(--crown-stroke)" stroke-width="0.8" stroke-linejoin="round" />
-            <polygon points="8,62 22,54 22,108 8,102" fill="url(#glueHatch)" opacity="0.35" />
+            <!-- COROA 1: LADO FRENTE (Centro X=57.5, Y=28..78) -->
+            <g id="crownFront">
+              <!-- Margem externa de plastificação (+3mm) -->
+              <path class="tech-guide"
+                d="M 32,81 L 12,34 L 38,57 L 57.5,25 L 77,57 L 103,34 L 83,81 Z"
+                fill="none" stroke="#0284C7" stroke-width="0.35" stroke-dasharray="2,1.2" />
 
-            <!-- Corpo Principal da Coroa de 3 Pontas (X=22 até X=192 -> 170mm exatos) -->
-            <path
-              d="M 22,108
-                 L 22,30
-                 L 65.5,67
-                 L 107,28
-                 L 148.5,67
-                 L 192,30
-                 L 192,108
-                 Z"
-              fill="url(#crownGrad1)"
-              stroke="var(--crown-stroke)"
-              stroke-width="1.3"
-              stroke-linejoin="round" />
+              <!-- Contorno Principal da Coroa Frente (85mm x 50mm: X=15..100, Y=28..78) -->
+              <path
+                d="M 35,78
+                   L 15,36
+                   L 39,56
+                   L 57.5,28
+                   L 76,56
+                   L 100,36
+                   L 80,78
+                   Z"
+                fill="url(#crownGrad1)"
+                stroke="var(--crown-stroke)"
+                stroke-width="1.3"
+                stroke-linejoin="round" />
 
-            <!-- Brilho cartoon interno nas pontas da coroa -->
-            <path
-              d="M 27,98 L 27,41 L 63,71"
-              fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55" />
-            <path
-              d="M 107,36 L 107,96"
-              fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" opacity="0.35" />
+              <!-- Brilhos internos estilo desenho animado -->
+              <path d="M 22,43 L 38,56 L 55,33" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.65" />
+              <path d="M 72,58 L 93,43" fill="none" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" opacity="0.55" />
 
-            <!-- Guias de Dobra da Aba A e Local de Colagem da Haste C -->
+              <!-- Guias técnicas da Coroa Frente -->
+              <g class="tech-guide">
+                <!-- Marcação de colagem da haste de acetato (15mm x 15mm na base central) -->
+                <rect x="50" y="63" width="15" height="15" fill="none" stroke="#DC2626" stroke-width="0.6" stroke-dasharray="1.8,1.2" />
+                <text x="57.5" y="60.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" font-weight="800" fill="#DC2626">
+                  COLE A HASTE (15mm)
+                </text>
+                <text x="57.5" y="72" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" font-weight="700" fill="#0F172A">
+                  NO MEIO AQUI
+                </text>
+
+                <!-- Identificação e Cota -->
+                <text x="57.5" y="48" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.6" font-weight="800" fill="#0F172A">
+                  COROA — FRENTE
+                </text>
+                <text x="57.5" y="52" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                  85 mm × 50 mm (Desenho)
+                </text>
+              </g>
+            </g>
+
+            <!-- COROA 2: LADO VERSO ESPELHADO (Centro X=152.5, Y=28..78) -->
+            <g id="crownBack">
+              <!-- Margem externa de plastificação (+3mm) -->
+              <path class="tech-guide"
+                d="M 127,81 L 107,34 L 133,57 L 152.5,25 L 172,57 L 198,34 L 178,81 Z"
+                fill="none" stroke="#0284C7" stroke-width="0.35" stroke-dasharray="2,1.2" />
+
+              <!-- Contorno Principal da Coroa Verso Espelhada (85mm x 50mm: X=110..195, Y=28..78) -->
+              <path
+                d="M 130,78
+                   L 110,36
+                   L 134,56
+                   L 152.5,28
+                   L 171,56
+                   L 195,36
+                   L 175,78
+                   Z"
+                fill="url(#crownGrad1)"
+                stroke="var(--crown-stroke)"
+                stroke-width="1.3"
+                stroke-linejoin="round" />
+
+              <!-- Brilhos internos espelhados -->
+              <path d="M 188,43 L 172,56 L 155,33" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.65" />
+              <path d="M 138,58 L 117,43" fill="none" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" opacity="0.55" />
+
+              <!-- Guias técnicas da Coroa Verso -->
+              <g class="tech-guide">
+                <!-- Marcação de colagem da haste de acetato -->
+                <rect x="145" y="63" width="15" height="15" fill="none" stroke="#DC2626" stroke-width="0.6" stroke-dasharray="1.8,1.2" />
+                <text x="152.5" y="60.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" font-weight="800" fill="#DC2626">
+                  COLE A HASTE (15mm)
+                </text>
+                <text x="152.5" y="72" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.0" font-weight="700" fill="#0F172A">
+                  NO MEIO AQUI
+                </text>
+
+                <!-- Identificação e Cota -->
+                <text x="152.5" y="48" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.6" font-weight="800" fill="#0F172A">
+                  COROA — VERSO
+                </text>
+                <text x="152.5" y="52" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="1.95" fill="#334155">
+                  Cole de costas p/ a Frente (Sanduíche)
+                </text>
+              </g>
+            </g>
+
+            <!-- Cota de largura e instrução entre as duas coroas -->
             <g class="tech-guide">
-              <!-- Única linha de dobra da coroa: dobra da ABA A (X=22mm) -->
-              <line x1="22" y1="54" x2="22" y2="108" stroke="#DC2626" stroke-width="0.75" stroke-dasharray="2.5,1.8" />
-
-              <!-- Indicação da Borda Direita B (onde a Aba A vai colada por trás para fechar o anel) -->
-              <line x1="189" y1="54" x2="189" y2="106" stroke="#15803D" stroke-width="0.5" stroke-dasharray="1.5,1.5" />
-
-              <!-- Textos explicativos na Aba A e Borda B (ocultos na impressão) -->
-              <text x="15" y="82" text-anchor="middle" transform="rotate(-90 15 82)" font-family="Segoe UI, Arial, sans-serif" font-size="2.35" font-weight="800" fill="#DC2626">
-                ABA "A": DOBRE E PASSE COLA AQUI
-              </text>
-              <text x="185" y="80" text-anchor="middle" transform="rotate(-90 185 80)" font-family="Segoe UI, Arial, sans-serif" font-size="2.2" font-weight="800" fill="#15803D">
-                BORDA "B": COLE A ABA "A" AQUI POR TRÁS
+              <line x1="15" y1="84" x2="100" y2="84" stroke="#0284C7" stroke-width="0.35" />
+              <line x1="15" y1="82" x2="15" y2="86" stroke="#0284C7" stroke-width="0.4" />
+              <line x1="100" y1="82" x2="100" y2="86" stroke="#0284C7" stroke-width="0.4" />
+              <text x="57.5" y="87.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" font-weight="700" fill="#0284C7">
+                Largura: 85 mm (8,5 cm)
               </text>
 
-              <!-- Marcação central de exatos 15mm na base (X=99.5mm até X=114.5mm) para fixação da haste de acetato -->
-              <rect x="99.5" y="99" width="15" height="9" fill="none" stroke="#0284C7" stroke-width="0.65" stroke-dasharray="1.8,1.2" />
-              <text x="107" y="97.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.35" font-weight="800" fill="#0284C7">
-                LOCAL "C" (15 mm): COLE A PONTA DA HASTE DE ACETATO AQUI POR DENTRO
+              <line x1="110" y1="84" x2="195" y2="84" stroke="#0284C7" stroke-width="0.35" />
+              <line x1="110" y1="82" x2="110" y2="86" stroke="#0284C7" stroke-width="0.4" />
+              <line x1="195" y1="82" x2="195" y2="86" stroke="#0284C7" stroke-width="0.4" />
+              <text x="152.5" y="87.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" font-weight="700" fill="#0284C7">
+                Altura: 50 mm (5,0 cm)
               </text>
 
-              <!-- Explicação direta no centro da Coroa (oculta na impressão) -->
-              <text x="107" y="76" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="3.4" font-weight="800" fill="#0F172A">
-                1. COROA FLUTUANTE (IMPRIME SÓ 1 VEZ!)
+              <text x="105" y="93" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.35" font-weight="800" fill="#15803D">
+                ★ COMO MONTAR A COROA: Recorte Frente e Verso. Cole uma de costas para a outra com a haste de acetato no meio!
               </text>
-              <text x="107" y="81" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="700" fill="#334155">
-                Não dobre o meio: apenas curve formando um anel redondo e cole a ABA "A" atrás da BORDA "B"
-              </text>
-              <text x="107" y="85.2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#475569">
-                (Opcional: se preferir a coroa reta/aberta dos 2 lados sem fechar em anel, imprima 2x e cole Frente + Verso)
+              <text x="105" y="96.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="2.05" fill="#475569">
+                Fica leve, brilhante dos dois lados, não precisa fechar em cilindro e flutua perfeitamente no tamanho exato do desenho!
               </text>
             </g>
           </g>
@@ -1072,13 +1134,13 @@
           <g class="tech-guide accessory-text" transform="translate(10, 275)">
             <rect x="0" y="0" width="190" height="16" rx="2" fill="#F8FAFC" stroke="#0284C7" stroke-width="0.35" />
             <text x="4" y="4.8" font-family="Segoe UI, Arial, sans-serif" font-size="2.3" font-weight="800" fill="#0F172A">
-              RESUMO DE COLAGEM (FOLHA 1):
+              RESUMO DE MONTAGEM (FOLHA 1):
             </text>
             <text x="4" y="9.3" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#334155">
-              • COROA (Imprime 1x): Curve em círculo (anel) e cole a ABA "A" atrás da BORDA "B". Cole a haste transparente de acetato por dentro na marca "C".
+              • COROA DO DESENHO (85×50mm): Recorte Frente e Verso. Cole uma de costas para a outra com a ponta da haste de acetato no meio (Sanduíche)!
             </text>
             <text x="4" y="13.6" font-family="Segoe UI, Arial, sans-serif" font-size="2.1" fill="#334155">
-              • VARINHA (Imprime 1x): Enrole as tiras pretas (3A+3B) nos palitos. Ponha 3,5 cm da ponta do cabo entre as 2 Estrelas e cole Frente + Verso!
+              • VARINHA (Ø 95mm): Enrole as tiras pretas (3A+3B) nos palitos. Ponha 3,5 cm da ponta do cabo entre as 2 Estrelas e cole Frente + Verso!
             </text>
           </g>
         </svg>
